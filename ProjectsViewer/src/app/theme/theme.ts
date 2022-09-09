@@ -17,6 +17,10 @@ export const Default: Theme = {
     "--item-home-textcolor": "#4d4d4d",
     "--item-home-glow": "#575757",
     "--item-home-glow-hover": "#575757",
+    "--home-button-background": "#4e4e4e",
+    "--home-button-color": "#111111",
+    "--home-button-background-hover": "#111111",
+    "--home-button-color-hover": "#4e4e4e",
 
     "--menu-bar-background": "#1d1d1d",
     "--menu-bar-logo-color": "#575757",

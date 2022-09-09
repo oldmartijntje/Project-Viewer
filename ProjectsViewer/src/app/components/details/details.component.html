@@ -36,9 +36,7 @@
           </h2>
           <h2 class="project-header-version" *ngIf="selectedProject.version">Version: {{ selectedProject.version }}
           </h2>
-          <h2 class="project-header-version" *ngIf="!selectedProject.version">Doesn't have a version name defined</h2>
           <h2 class="project-header-status" *ngIf="selectedProject.status">Status: {{ selectedProject.status }}</h2>
-          <h2 class="project-header-status" *ngIf="!selectedProject.status">This project doesn't have a status</h2>
           <h3 *ngIf="offline" class="project-header-status">This is an offline page, Things might not be up to date</h3>
         </div>
       </div>
@@ -53,14 +51,12 @@
           <h1 class="rating">Rating: {{selectedProject.scale}}</h1>
         </div>
         <h3 *ngIf="selectedProject.type">Made using: {{selectedProject.type}}</h3>
-        <h3 *ngIf="!selectedProject.type">It's not defined what was used to make the project</h3>
         <h3 *ngIf="selectedProject.link">Project URL: <a href="{{selectedProject.link}}">{{selectedProject.link}}</a>
         </h3>
-        <h3 *ngIf="!selectedProject.link">There is no project URL defined</h3>
         <div class="desctiption-box">
           <h3 *ngIf="selectedProject.description">{{selectedProject.description}}</h3>
           <h3 *ngIf="!selectedProject.description">It seems to be a bit empty here, this project doesn't have a
-            description defined.</h3>
+            description.</h3>
         </div>
         <h3 *ngIf="selectedProject.readmeUrl">Url to the readme: <a href="{{ selectedProject.readmeUrl }}">{{
             selectedProject.readmeUrl }}</a></h3>

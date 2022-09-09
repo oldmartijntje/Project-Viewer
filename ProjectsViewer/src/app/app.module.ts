@@ -10,6 +10,10 @@ import { RawViewerComponent } from './components/raw-viewer/raw-viewer.component
 import { HomeComponent } from './components/home/home.component';
 import { MenuBarComponent } from './components/menu-bar/menu-bar.component';
 import { DetailsComponent } from './components/details/details.component';
+import { SettingsComponent } from './components/settings/settings.component';
+import { InfoComponent } from './components/info/info.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { RedirectComponent } from './components/redirect/redirect.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +22,11 @@ import { DetailsComponent } from './components/details/details.component';
     RawViewerComponent,
     HomeComponent,
     MenuBarComponent,
-    DetailsComponent
+    DetailsComponent,
+    SettingsComponent,
+    InfoComponent,
+    FooterComponent,
+    RedirectComponent
   ],
   imports: [
     BrowserModule,

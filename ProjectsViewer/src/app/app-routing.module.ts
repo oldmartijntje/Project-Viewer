@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DetailsComponent } from './components/details/details.component';
 import { HomeComponent } from './components/home/home.component';
 import { RawViewerComponent } from './components/raw-viewer/raw-viewer.component';
+import { RedirectComponent } from './components/redirect/redirect.component';
 
 const routes: Routes = [
   {
@@ -10,15 +11,23 @@ const routes: Routes = [
     component: HomeComponent,
   },
   {
+    path: 'page/:pageNumber',
+    component: HomeComponent,
+  },
+  {
+    path: 'r/:pageNumber',
+    component: RedirectComponent,
+  },
+  {
     path: 'raw',
     component: RawViewerComponent,
   },
   {
-    path: 'page/:id',
+    path: 'project/:id',
     component: DetailsComponent,
   },
   {
-    path: 'offlinePage/:oid',
+    path: 'offlineProject/:oid',
     component: DetailsComponent,
   }];
 
