@@ -15,15 +15,12 @@ export class RedirectComponent implements OnInit, OnDestroy {
   constructor(private router: Router, private ActivatedRoute: ActivatedRoute, private cookieService: CookieService) { }
 
   ngOnInit(): void {
-    this.cookiePlusNumber('ProjectsViewer.redirecting', 1, 1)
     this.cookieService.set('ProjectsViewer.achievement.howdidwegethere', 'Found')
     this.routeSub = this.ActivatedRoute.params.subscribe((params: Params) => {
       if (params['pageNumber'] != undefined) {
         if (!isNaN(params['pageNumber'])) {
-          this.cookiePlusNumber('ProjectsViewer.pageSwitched', 1, 1)
           this.router.navigate(['page', params['pageNumber']]);
         } else {
-          this.cookiePlusNumber('ProjectsViewer.falseRedirect', 1, 1)
           this.router.navigate(['']);
         }
       } else if (params['page'] != undefined) {
