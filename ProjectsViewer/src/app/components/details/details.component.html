@@ -48,7 +48,22 @@
       <div class="infoPage">
         <!--Creator rating-->
         <div *ngIf="selectedProject.scale" class="rating-box">
-          <h1 class="rating">Rating: {{selectedProject.scale}}</h1>
+          <div class="rating-bg"
+            *ngIf="selectedProject.scale != 'OG' && selectedProject.scale != 'S' && selectedProject.scale != 'S+' && selectedProject.scale != 'A'">
+            <h1 class="rating">Rating: {{selectedProject.scale}}</h1>
+          </div>
+          <div *ngIf="selectedProject.scale == 'OG'" class="rating-og-bg">
+            <h1 class="rating-og">Rating: {{selectedProject.scale}}</h1>
+          </div>
+          <div *ngIf="selectedProject.scale == 'S+'" class="rating-s-plus-bg">
+            <h1 class="rating-s-plus">Rating: {{selectedProject.scale}}</h1>
+          </div>
+          <div *ngIf="selectedProject.scale == 'S'" class="rating-s-bg">
+            <h1 class="rating-s">Rating: {{selectedProject.scale}}</h1>
+          </div>
+          <div *ngIf="selectedProject.scale == 'A'" class="rating-a-bg">
+            <h1 class="rating-a">Rating: {{selectedProject.scale}}</h1>
+          </div>
         </div>
         <h3 *ngIf="selectedProject.type">Made using: {{selectedProject.type}}</h3>
         <h3 *ngIf="selectedProject.link">Project URL: <a href="{{selectedProject.link}}">{{selectedProject.link}}</a>

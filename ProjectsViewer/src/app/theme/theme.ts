@@ -31,6 +31,16 @@ export const Default: Theme = {
 
     "--rating-background": "#0c0052",
     "--rating-color": "#0714ca",
+    "--rating-background-og": "#004e00",
+    "--rating-color-og": "#058800",
+    "--rating-background-s": "#3f0013",
+    "--rating-color-s": "#97002d",
+    "--rating-background-a": "#5f0600",
+    "--rating-color-a": "#9b0000",
+    "--rating-background-s-plus": "#c46f00",
+    "--rating-color-s-plus": "#ffe600",
+
+
 
     "--details-title-color": "#575757",
     "--details-version-text-color": "#575757",

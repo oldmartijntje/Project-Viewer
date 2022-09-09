@@ -100,9 +100,45 @@
 }
 
 .rating {
-  &-box {
+  &-bg {
     border-radius: 5px;
     background: var(--rating-background);
+  }
+
+  &-og {
+    &-bg {
+      border-radius: 5px;
+      background: var(--rating-background-og);
+    }
+
+    color: var(--rating-color-og);
+  }
+
+  &-s {
+    &-bg {
+      border-radius: 5px;
+      background: var(--rating-background-s);
+    }
+
+    color: var(--rating-color-s);
+  }
+
+  &-s-plus {
+    &-bg {
+      border-radius: 5px;
+      background: var(--rating-background-s-plus);
+    }
+
+    color: var(--rating-color-s-plus);
+  }
+
+  &-a {
+    &-bg {
+      border-radius: 5px;
+      background: var(--rating-background-a);
+    }
+
+    color: var(--rating-color-a);
   }
 
   color: var(--rating-color);

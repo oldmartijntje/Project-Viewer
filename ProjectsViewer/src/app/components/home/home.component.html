@@ -7,6 +7,24 @@
           alt="missing texture texture missing" class="game-thumbnail">
       </div>
       <div class="game-description">
+        <div *ngIf="project.scale" class="rating-box">
+          <div class="rating-bg"
+            *ngIf="project.scale != 'OG' && project.scale != 'S' && project.scale != 'S+' && project.scale != 'A'">
+            <p class="rating">Rating: {{project.scale}}</p>
+          </div>
+          <div *ngIf="project.scale == 'OG'" class="rating-og-bg">
+            <p class="rating-og">Rating: {{project.scale}}</p>
+          </div>
+          <div *ngIf="project.scale == 'S+'" class="rating-s-plus-bg">
+            <p class="rating-s-plus">Rating: {{project.scale}}</p>
+          </div>
+          <div *ngIf="project.scale == 'S'" class="rating-s-bg">
+            <p class="rating-s">Rating: {{project.scale}}</p>
+          </div>
+          <div *ngIf="project.scale == 'A'" class="rating-a-bg">
+            <p class="rating-a">Rating: {{project.scale}}</p>
+          </div>
+        </div>
         <p *ngIf="project.name" class="game-name">{{ project.name }}</p>
         <p *ngIf="!project.name" class="game-name">Unnamed</p>
       </div>
