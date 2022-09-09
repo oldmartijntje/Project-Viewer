@@ -1,0 +1,53 @@
+
+.games {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.game {
+  width: 280px;
+  margin: 10px;
+  height: 260px;
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: var(--item-home-background);
+    box-shadow: 4px 3px 8px 0px var(--item-home-glow);
+  transition-duration: 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 4px 3px 12px 6px var(--item-home-glow-hover);
+    transform: translateY(-3px)
+  }
+
+  &-thumb-container {
+    background-color: var(--image-background-home);
+    position: relative;
+    height: 172px;
+    text-align: center;
+    width: 280px;
+  }
+
+  &-thumbnail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    height: 172px;
+  }
+
+  &-name {
+    color: var(--item-home-textcolor);
+    font-weight: 700;
+    font-size: 22px;
+    margin: 5px 5px 5px 5px;
+      white-space: wrap;
+    text-overflow: ellipse;
+    overflow: hidden;
+  }
+
+}

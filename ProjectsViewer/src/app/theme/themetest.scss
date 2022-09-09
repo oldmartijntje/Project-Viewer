@@ -1,0 +1,43 @@
+:root {
+  /* Colors */
+  --background: #363636;
+  --image-background-home: #000000;
+
+  --item-home-background: #161616;
+  --item-home-textcolor: #4d4d4d;
+  --item-home-glow: #575757;
+  --item-home-glow-hover: #575757;
+
+  --menu-bar-background: #1d1d1d;
+  --menu-bar-logo-color: #575757;
+  --menu-bar-button-background: #4e4e4e;
+  --menu-bar-button-color: #1d1d1d;
+  --menu-bar-button-background-hover: #1d1d1d;
+  --menu-bar-button-color-hover: #1d1d1d;
+
+  --rating-background: #0c0052;
+  --rating-color: #0714ca;
+
+  --details-tilte-color: #575757;
+  --details-version-text-color: #575757;
+  --details-status-text-color: #575757;
+  --details-creators-text-color: #575757;
+  --details-title-shadow-color: #111111;
+  --details-version-text-shadow-color: #111111;
+  --details-status-text-shadow-color: #111111;
+  --details-creators-shadow-color: #111111;
+
+  --details-info-text-color: #4e4e4e;
+  --details-info-background-color: #1d1d1d;
+}
+
+body {
+  background: var(--background);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", sans-serif;
+}

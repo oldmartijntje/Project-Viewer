@@ -1,0 +1,15 @@
+<div class="games">
+  <ng-container *ngFor="let project of projects">
+    <div class="game" (click)="openProjectDetails(project.id)">
+      <div class="game-thumb-container">
+        <img *ngIf="project.tumbnail" src="{{ project.tumbnail }}" alt="thumbnail" class="game-thumbnail">
+        <img *ngIf="!project.tumbnail" src="assets\images\appTextures\textureMissing.png"
+          alt="missing texture texture missing" class="game-thumbnail">
+      </div>
+      <div class="game-description">
+        <p *ngIf="project.name" class="game-name">{{ project.name }}</p>
+        <p *ngIf="!project.name" class="game-name">Unnamed</p>
+      </div>
+    </div>
+  </ng-container>
+</div>

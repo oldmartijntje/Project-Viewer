@@ -1,0 +1,39 @@
+<button (click)="initNewProject()">Create New Project</button>
+
+<table>
+  <thead>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Link</th>
+    <th>Status</th>
+    <th>Current Version</th>
+    <th>Type</th>
+    <th>Tumbnail</th>
+    <th>Creators</th>
+    <th>ReadmeURL</th>
+    <th>UserFriendlyness</th>
+    <th>Customizebility</th>
+    <th>Scale</th>
+    <th></th>
+    <th></th>
+  </thead>
+  <tbody *ngFor="let project of projects">
+    <td>{{project.id}}</td>
+    <td>{{project.name}}</td>
+    <td>{{project.description}}</td>
+    <td>{{project.link}}</td>
+    <td>{{project.status}}</td>
+    <td>{{project.version}}</td>
+    <td>{{project.type}}</td>
+    <td><img src="{{project.tumbnail}}" alt="{{project.tumbnail}}"> </td>
+    <td>{{project.creators}}</td>
+    <td>{{project.readmeUrl}}</td>
+    <td>{{project.userFriendlyness}}</td>
+    <td>{{project.customizebility}}</td>
+    <td>{{project.scale}}</td>
+    <td><button (click)="editProject(project)">Edit</button></td>
+    <td><button (click)="logProject(project)">Write2console</button></td>
+  </tbody>
+</table>
+<app-edit-project [project]="projectToEdit" (projectUpdated)="updateProjectList($event)"></app-edit-project>

@@ -1,0 +1,44 @@
+<div *ngIf="project">
+  <h2>{{ project.name }}</h2>
+  <div>Name:
+    <input [(ngModel)]="project.name" placeholder="Name">
+  </div>
+  <div>Description:
+    <input [(ngModel)]="project.description" placeholder="Description">
+  </div>
+  <div>Link:
+    <input [(ngModel)]="project.link" placeholder="Link">
+  </div>
+  <div>Status:
+    <input [(ngModel)]="project.status" placeholder="Status">
+  </div>
+  <div>Version:
+    <input [(ngModel)]="project.version" placeholder="Version">
+  </div>
+  <div>Type:
+    <input [(ngModel)]="project.type" placeholder="Type">
+  </div>
+  <div>Tumbnail:
+    <input [(ngModel)]="project.tumbnail" placeholder="Tumbnail">
+  </div>
+  <div>Creators:
+    <input [(ngModel)]="project.creators" placeholder="Creators">
+  </div>
+  <div>ReadmeURL:
+    <input [(ngModel)]="project.readmeUrl" placeholder="ReadmeURL">
+  </div>
+  <div>UserFriendlyness:
+    <input [(ngModel)]="project.userFriendlyness" placeholder="UserFriendlyness">
+  </div>
+  <div>Customizebility:
+    <input [(ngModel)]="project.customizebility" placeholder="Customizebility">
+  </div>
+  <div>Scale:
+    <input [(ngModel)]="project.scale" placeholder="Scale">
+  </div>
+  <button (click)="updateProject(project)" *ngIf="project.id">Save</button>
+  <button (click)="deleteProject(project)" *ngIf="project.id">Delete</button>
+  <button (click)="createProject(project)" *ngIf="!project.id">Create</button>
+  <button (click)="cancelEditor()">Cancel</button>
+  <button (click)="duplicateProject(project)" *ngIf="project.id">Ctrl C, Ctrl V</button>
+</div>

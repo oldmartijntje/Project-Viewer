@@ -1,0 +1,74 @@
+<!--When u upen an online page in offline mode-->
+<div *ngIf="showOfflineError">
+  <h1>ERROR</h1>
+  <h2>You are trying to load an online page whilst being offline</h2>
+  <h3>click the button at the top to change</h3>
+</div>
+
+<!--When the project can't be found for some reason-->
+<div *ngIf="!showOfflineError">
+  <div *ngIf="selectedProject == undefined">
+    <h1>Hmm looks empty here</h1>
+    <h2 *ngIf="!offline">There could be multiple reasons why:</h2>
+    <h3>-The page you are trying to load does not exist</h3>
+    <h3 *ngIf="!offline">-The database is offline</h3>
+    <h3 *ngIf="!offline">-You are connected to the wrong database</h3>
+    <h3 *ngIf="!offline">-The page is still loading (very very unlikely)</h3>
+  </div>
+
+  <!--The part with the tumbnail and text in front of it-->
+  <div *ngIf="selectedProject != undefined" class="details">
+    <div class="project-banner">
+      <img *ngIf="selectedProject.tumbnail" class="project-banner-img" src="{{ selectedProject.tumbnail }}"
+        alt="no banner found banner hasn't been found">
+      <img *ngIf="!selectedProject.tumbnail" class="project-banner-img"
+        src="assets\images\appTextures\textureMissing.png" alt="no banner found banner hasn't been found">
+    </div>
+    <div class="project-content">
+      <div class="details-wrapper">
+        <div class="project-header">
+          <h1 class="project-header-title" *ngIf="selectedProject.name">{{ selectedProject.name }}</h1>
+          <h1 class="project-header-title" *ngIf="!selectedProject.name">Unnamed</h1>
+          <h2 class="project-header-creators" *ngIf="selectedProject.creators">Creators: {{ selectedProject.creators }}
+          </h2>
+          <h2 class="project-header-creators" *ngIf="!selectedProject.creators">There is no one to take credit for this
+            project
+          </h2>
+          <h2 class="project-header-version" *ngIf="selectedProject.version">Version: {{ selectedProject.version }}
+          </h2>
+          <h2 class="project-header-version" *ngIf="!selectedProject.version">Doesn't have a version name defined</h2>
+          <h2 class="project-header-status" *ngIf="selectedProject.status">Status: {{ selectedProject.status }}</h2>
+          <h2 class="project-header-status" *ngIf="!selectedProject.status">This project doesn't have a status</h2>
+          <h3 *ngIf="offline" class="project-header-status">This is an offline page, Things might not be up to date</h3>
+        </div>
+      </div>
+
+
+
+
+      <!--The part with the description and stuff-->
+      <div class="infoPage">
+        <!--Creator rating-->
+        <div *ngIf="selectedProject.scale" class="rating-box">
+          <h1 class="rating">Rating: {{selectedProject.scale}}</h1>
+        </div>
+        <h3 *ngIf="selectedProject.type">Made using: {{selectedProject.type}}</h3>
+        <h3 *ngIf="!selectedProject.type">It's not defined what was used to make the project</h3>
+        <h3 *ngIf="selectedProject.link">Project URL: <a href="{{selectedProject.link}}">{{selectedProject.link}}</a>
+        </h3>
+        <h3 *ngIf="!selectedProject.link">There is no project URL defined</h3>
+        <div class="desctiption-box">
+          <h3 *ngIf="selectedProject.description">{{selectedProject.description}}</h3>
+          <h3 *ngIf="!selectedProject.description">It seems to be a bit empty here, this project doesn't have a
+            description defined.</h3>
+        </div>
+        <h3 *ngIf="selectedProject.readmeUrl">Url to the readme: <a href="{{ selectedProject.readmeUrl }}">{{
+            selectedProject.readmeUrl }}</a></h3>
+        <h3 *ngIf="selectedProject.userFriendlyness">The project is {{
+          selectedProject.userFriendlyness }}</h3>
+        <h3 *ngIf="selectedProject.customizebility">Customizable: {{
+          selectedProject.customizebility }}</h3>
+      </div>
+    </div>
+  </div>
+</div>
