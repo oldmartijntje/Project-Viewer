@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProjectService } from 'src/app/services/project.service';
 import { CookieService } from 'ngx-cookie-service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu-bar',
@@ -8,11 +9,17 @@ import { CookieService } from 'ngx-cookie-service';
   styleUrls: ['./menu-bar.component.scss']
 })
 export class MenuBarComponent implements OnInit {
-  offlineMode: boolean | undefined;
+  offlineMode: boolean;
+  showAchievements: boolean;
 
-  constructor(private projectService: ProjectService, private cookieService: CookieService) { }
+  constructor(private projectService: ProjectService, private cookieService: CookieService, private router: Router) { }
 
   ngOnInit(): void {
+    if (this.cookieService.get('ProjectsViewer.showachievement') === "True") {
+      this.showAchievements = true;
+    } else {
+      this.showAchievements = false;
+    }
     this.offlineMode = this.cookieService.get('ProjectsViewer.mode') === 'Offline';
   }
 
@@ -32,6 +39,10 @@ export class MenuBarComponent implements OnInit {
 
   logCookies() {
     console.log(this.cookieService.getAll());
+  }
+
+  redirect(page: string) {
+    this.router.navigate(['r', 'p', page]);
   }
 
 }

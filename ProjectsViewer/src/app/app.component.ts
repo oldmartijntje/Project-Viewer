@@ -15,6 +15,9 @@ export class AppComponent implements OnInit, OnDestroy {
   constructor(private httpClient: HttpClient, private themeService: ThemeService, private cookieService: CookieService) { }
 
   ngOnInit() {
+    if (!this.cookieService.check('ProjectsViewer.showachievement')) {
+      this.cookieService.set('ProjectsViewer.showachievement', 'False')
+    }
     if (!this.cookieService.check('ProjectsViewer.mode')) {
       this.cookieService.set('ProjectsViewer.mode', 'Online')
     }

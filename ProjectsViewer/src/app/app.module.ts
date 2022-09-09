@@ -14,6 +14,7 @@ import { SettingsComponent } from './components/settings/settings.component';
 import { InfoComponent } from './components/info/info.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { RedirectComponent } from './components/redirect/redirect.component';
+import { AchievementsComponent } from './components/achievements/achievements.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { RedirectComponent } from './components/redirect/redirect.component';
     SettingsComponent,
     InfoComponent,
     FooterComponent,
-    RedirectComponent
+    RedirectComponent,
+    AchievementsComponent
   ],
   imports: [
     BrowserModule,
