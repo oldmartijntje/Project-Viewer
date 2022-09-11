@@ -530,8 +530,8 @@ export const projects: Project[] = [
     "id": 35,
     "name": "Minecraft Prison",
     "description": "Creating an Minecraft prison where you can play. You can be a guard or warden or prisoner.",
-    "link": "henkisjemoederniet.aternos.me",
-    "status": "10%?",
+    "link": "https://www.youtube.com/watch?v=ROAejCjnwLU&feature=youtu.be",
+    "status": "5%?",
     "version": "",
     "type": "Minecraft",
     "tumbnail": "assets/images/appTextures/prison.png",
@@ -540,6 +540,21 @@ export const projects: Project[] = [
     "userFriendlyness": "",
     "customizebility": "",
     "scale": "C"
+  },
+  {
+    "id": 36,
+    "name": "Rotate an 2D Array",
+    "description": "This project rotates a 2D array, and if you want to rotate a 3D array, just split the 3D array into 2D slices and then run the function and then merge it back into a 3D array. Or even simpler, put in the 3D erray and it will work too, but it can rotate only in 1 way then. Gonna use this as extra tool for my CodeDungoen project.",
+    "link": "https://github.com/oldmartijntje/projects/blob/main/rotateArray.py",
+    "status": "Completed",
+    "version": "",
+    "type": "Python",
+    "tumbnail": "assets/images/appTextures/rotateArray.png",
+    "creators": "OldMartijntje",
+    "readmeUrl": "",
+    "userFriendlyness": "user friendly, It's just a function, you put in an array and an int as arguments, and it rotates the erray 90 degrres times the intager you also gave as input.",
+    "customizebility": "",
+    "scale": ""
   }
 ];
 
