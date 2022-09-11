@@ -44,7 +44,7 @@ export const projects: Project[] = [
     "readmeUrl": "",
     "userFriendlyness": "",
     "customizebility": "",
-    "scale": "B"
+    "scale": "C"
   },
   {
     "id": 3,
@@ -525,6 +525,21 @@ export const projects: Project[] = [
     "userFriendlyness": "",
     "customizebility": "",
     "scale": ""
+  },
+  {
+    "id": 35,
+    "name": "Minecraft Prison",
+    "description": "Creating an Minecraft prison where you can play. You can be a guard or warden or prisoner.",
+    "link": "henkisjemoederniet.aternos.me",
+    "status": "10%?",
+    "version": "",
+    "type": "Minecraft",
+    "tumbnail": "assets/images/appTextures/prison.png",
+    "creators": "OldMartijntje, Jake18_Dark, Bartjebro, Mielesgames",
+    "readmeUrl": "",
+    "userFriendlyness": "",
+    "customizebility": "",
+    "scale": "C"
   }
 ];
 
