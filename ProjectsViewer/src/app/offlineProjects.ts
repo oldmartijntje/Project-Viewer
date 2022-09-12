@@ -79,11 +79,11 @@ export const projects: Project[] = [
   {
     "id": 5,
     "name": "CodeDungeon",
-    "description": "This Project is there as learning tool, a tool to teach kids the logic of programming in a fun way, By programming the movement of your character in a game.",
+    "description": "This Project is there as learning tool, a tool to teach kids the logic of programming in a fun way, By programming the movement of your character in a game. It requires python 3.10.1+",
     "link": "https://github.com/oldmartijntje/CodeDungeon",
     "status": "Completed",
     "version": "v1.1.0",
-    "type": "Python",
+    "type": "Python 3.10.1+",
     "tumbnail": "assets/images/appTextures/codeDungeon.png",
     "creators": "OldMartijntje",
     "readmeUrl": "https://github.com/oldmartijntje/CodeDungeon/blob/main/README.md",
@@ -529,7 +529,7 @@ export const projects: Project[] = [
   {
     "id": 35,
     "name": "Minecraft Prison",
-    "description": "Creating an Minecraft prison where you can play. You can be a guard or warden or prisoner.",
+    "description": "Creating an Minecraft prison where you can play. You can be a guard or warden or prisoner. It has enough place to maybe build a city or something. It's in my creative testworld so the worldfiles are alreade 1 and a half gigabyte.",
     "link": "https://www.youtube.com/watch?v=ROAejCjnwLU&feature=youtu.be",
     "status": "5%?",
     "version": "",
@@ -555,6 +555,21 @@ export const projects: Project[] = [
     "userFriendlyness": "user friendly, It's just a function, you put in an array and an int as arguments, and it rotates the erray 90 degrres times the intager you also gave as input.",
     "customizebility": "",
     "scale": ""
+  },
+  {
+    "id": 37,
+    "name": "Game Database",
+    "description": "This is a Database with i think all games, it uses an api to grab the games, it has some nice search options, and about page and other fun features, this was made using a tutorial mostly, but i added a lot of custom things myself. the tuturial is linked in the about page in the project itself",
+    "link": "https://github.com/oldmartijntje/internship/tree/master/angular-test/Game-Database",
+    "status": "Completed",
+    "version": "",
+    "type": "Angular",
+    "tumbnail": "assets/images/appTextures/gameDatabase.png",
+    "creators": "OldMartijntje",
+    "readmeUrl": "",
+    "userFriendlyness": "user friendly, just search for a game, apply some filters, or click the random game button. Scroll down to see settings.",
+    "customizebility": "You can change the app color theme, though the themes aren't the best design wise",
+    "scale": "E"
   }
 ];
 
