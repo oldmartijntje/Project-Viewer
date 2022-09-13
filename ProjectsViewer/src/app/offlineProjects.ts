@@ -82,7 +82,7 @@ export const projects: Project[] = [
     "description": "This Project is there as learning tool, a tool to teach kids the logic of programming in a fun way, By programming the movement of your character in a game. It requires python 3.10.1+",
     "link": "https://github.com/oldmartijntje/CodeDungeon",
     "status": "Completed",
-    "version": "v1.1.0",
+    "version": "release candidate 5 for v1.2.0",
     "type": "Python 3.10.1+",
     "tumbnail": "assets/images/appTextures/codeDungeon.png",
     "creators": "OldMartijntje",
