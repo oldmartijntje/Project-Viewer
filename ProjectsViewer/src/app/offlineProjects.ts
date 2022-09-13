@@ -570,6 +570,21 @@ export const projects: Project[] = [
     "userFriendlyness": "user friendly, just search for a game, apply some filters, or click the random game button. Scroll down to see settings.",
     "customizebility": "You can change the app color theme, though the themes aren't the best design wise",
     "scale": "E"
+  },
+  {
+    "id": 38,
+    "name": "Map Viewer - Openlayers Angular",
+    "description": "This is a map viewer made in angular, click on the map to see a location",
+    "link": "https://github.com/oldmartijntje/internship/tree/master/angular-test/openlayers-angular",
+    "status": "Completed",
+    "version": "",
+    "type": "Angular",
+    "tumbnail": "assets/images/appTextures/map.png",
+    "creators": "OldMartijntje",
+    "readmeUrl": "",
+    "userFriendlyness": "",
+    "customizebility": "",
+    "scale": ""
   }
 ];
 
