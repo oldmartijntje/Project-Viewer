@@ -574,7 +574,7 @@ export const projects: Project[] = [
   {
     "id": 38,
     "name": "Map Viewer - Openlayers Angular",
-    "description": "This is a map viewer made in angular, click on the map to see a location, double click to set a marker, that can't be removed",
+    "description": "This is a map viewer made in angular, click on the map to see a location, double click to set a marker, that can't be removed. It is meant to later show all locations from my internship their api, but right now we have problems with that.",
     "link": "https://github.com/oldmartijntje/internship/tree/master/angular-test/openlayers-angular",
     "status": "Completed",
     "version": "",
