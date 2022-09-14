@@ -586,5 +586,21 @@ export const projects: Project[] = [
     "customizebility": "",
     "scale": ""
   }
+  ,
+  {
+    "id": 39,
+    "name": "SafetyCT - TrainingsModule",
+    "description": "Let's just keep it at: CLASSEFIED",
+    "link": "",
+    "status": "",
+    "version": "",
+    "type": "Angular",
+    "tumbnail": "assets/images/appTextures/training.png",
+    "creators": "OldMartijntje",
+    "readmeUrl": "",
+    "userFriendlyness": "",
+    "customizebility": "",
+    "scale": ""
+  }
 ];
 
