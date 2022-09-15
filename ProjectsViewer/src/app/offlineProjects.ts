@@ -79,15 +79,15 @@ export const projects: Project[] = [
   {
     "id": 5,
     "name": "CodeDungeon",
-    "description": "This Project is there as learning tool, a tool to teach kids the logic of programming in a fun way, By programming the movement of your character in a game. It requires python 3.10.1+",
+    "description": "This Project is there as learning tool, a tool to teach kids the logic of programming in a fun way, By programming the movement of your character in a game. It requires python 3.10.1+. This game is a dungeon crawler game, inspider by pixeldungeon (and yes with stolen assets). You wake up in a creepy old dungoen with nothing but your sword, so you go find an exit and grab loot along the way, but there are also enemys, to what floor can you get before you die the inevitable death?",
     "link": "https://github.com/oldmartijntje/CodeDungeon",
     "status": "Completed",
-    "version": "release candidate 5 for v1.2.0",
+    "version": "v1.2.2",
     "type": "Python 3.10.1+",
     "tumbnail": "assets/images/appTextures/codeDungeon.png",
     "creators": "OldMartijntje",
     "readmeUrl": "https://github.com/oldmartijntje/CodeDungeon/blob/main/README.md",
-    "userFriendlyness": "very user friendly, there is a massive readme that explains everything.",
+    "userFriendlyness": "very user friendly, there is a massive readme that explains everything. And even if you don't want to read, just run the installer, run the example.py and see where you can get. (and maybe in the future there is a version where you don't have to program the inputs, where you can just play, or maybe you make it yourself?",
     "customizebility": "You can change almost everything, add almost everything, very customizable. everything is explained in my readme.",
     "scale": "S"
   },
