@@ -590,7 +590,7 @@ export const projects: Project[] = [
   {
     "id": 39,
     "name": "SafetyCT - TrainingsModule",
-    "description": "Let's just keep it at: CLASSEFIED",
+    "description": "The rebuilding of the SafetyCT testing module",
     "link": "",
     "status": "",
     "version": "",
