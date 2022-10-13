@@ -19,7 +19,7 @@ export const projects: Project[] = [
   {
     "id": 1,
     "name": "Pokemon Vibranium",
-    "description": "This is a pokemon game made by OldMartijntje using rpg maker xp and using pokemon essentials, It takes place in a new region.",
+    "description": "This is a pokemon game made by OldMartijntje using rpg maker xp and using pokemon essentials, It takes place in a new region. It has a massive storyline, but to find out what it's about, you should play it yourself. It has an child friendly mode which you can enable / disable when starting a game.",
     "link": "https://github.com/oldmartijntje/Pokemon-Vibranium",
     "status": "~10%",
     "version": "before alpha",
