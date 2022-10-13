@@ -22,7 +22,7 @@ export const projects: Project[] = [
     "description": "This is a pokemon game made by OldMartijntje using rpg maker xp and using pokemon essentials, It takes place in a new region.",
     "link": "https://github.com/oldmartijntje/Pokemon-Vibranium",
     "status": "~10%",
-    "version": "quadralpha 2.4",
+    "version": "before alpha",
     "type": "rpg maker xp + Pokemon Essentials",
     "tumbnail": "assets/images/appTextures/pokemonVibranium.png",
     "creators": "OldMartijntje",
