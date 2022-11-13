@@ -19,10 +19,10 @@ export const projects: Project[] = [
     {
         "id": 1,
         "name": "Pokemon Vibranium",
-        "description": "This is a pokemon game made by OldMartijntje using rpg maker xp and using pokemon essentials, It takes place in a new region.",
+        "description": "This is a pokemon game made by OldMartijntje using rpg maker xp and using pokemon essentials, It takes place in a new region. It has a massive storyline, but to find out what it's about, you should play it yourself. It has an child friendly mode which you can enable / disable when starting a game.",
         "link": "https://github.com/oldmartijntje/Pokemon-Vibranium",
-        "status": "~10% | on halt",
-        "version": "quadralpha 2.4",
+        "status": "~10%",
+        "version": "before alpha",
         "type": "rpg maker xp + Pokemon Essentials",
         "tumbnail": "assets/images/appTextures/pokemonVibranium.png",
         "creators": "OldMartijntje",
@@ -621,7 +621,7 @@ export const projects: Project[] = [
         "name": "LAN Game",
         "description": "A game that uses and utilizes my LAN and Accounts system",
         "link": "",
-        "status": "Started",
+        "status": "Future",
         "version": "",
         "type": "Python",
         "tumbnail": "assets/images/appTextures/textureMissing.png",
@@ -675,21 +675,6 @@ export const projects: Project[] = [
         "userFriendlyness": "",
         "customizebility": "",
         "scale": ""
-    },
-    {
-        "id": 45,
-        "name": "Genetica",
-        "description": "A game inspired by marvel Snap. You battle with cards, and to unlock new ards you merge them.",
-        "link": "",
-        "status": "Started",
-        "version": "",
-        "type": "Python",
-        "tumbnail": "assets/images/appTextures/textureMissing.png",
-        "creators": "OldMartijntje",
-        "readmeUrl": "",
-        "userFriendlyness": "",
-        "customizebility": "",
-        "scale": ""
-    },
+    }
 ];
 
