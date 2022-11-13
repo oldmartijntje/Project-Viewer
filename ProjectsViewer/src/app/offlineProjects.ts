@@ -675,6 +675,21 @@ export const projects: Project[] = [
         "userFriendlyness": "",
         "customizebility": "",
         "scale": ""
+    },
+    {
+        "id": 45,
+        "name": "Genetica",
+        "description": "A game inspired by marvel Snap. You battle with cards, and to unlock new ards you merge them.",
+        "link": "",
+        "status": "Started",
+        "version": "",
+        "type": "Python",
+        "tumbnail": "assets/images/appTextures/textureMissing.png",
+        "creators": "OldMartijntje",
+        "readmeUrl": "",
+        "userFriendlyness": "",
+        "customizebility": "",
+        "scale": ""
     }
 ];
 
