@@ -19,7 +19,7 @@ export const projects: Project[] = [
     {
         "id": 1,
         "name": "Pokemon Vibranium",
-        "description": "This is a pokemon game made by OldMartijntje using rpg maker xp and using pokemon essentials, It takes place in a new region. It has a massive storyline, but to find out what it's about, you should play it yourself. It has an child friendly mode which you can enable / disable when starting a game.",
+        "description": "This is a pokemon game made by OldMartijntje using rpg maker xp and using pokemon essentials, It takes place in a new region. It has a massive storyline, but to find out what it's about, you should play it yourself. It has an child friendly mode which you can enable / disable when starting a game. When you disable it it will have a dark undertone",
         "link": "https://github.com/oldmartijntje/Pokemon-Vibranium",
         "status": "~10%",
         "version": "before alpha",
@@ -690,6 +690,21 @@ export const projects: Project[] = [
         "userFriendlyness": "",
         "customizebility": "",
         "scale": ""
+    },
+    {
+        "id": 46,
+        "name": "Discord UNO",
+        "description": "A recreation of UNO, But than as discord bot. It's in the same reposetory as normal UNO, but not the same py",
+        "link": "https://github.com/oldmartijntje/UNO",
+        "status": "Completed",
+        "version": "2.4.0",
+        "type": "Python",
+        "tumbnail": "assets/images/appTextures/uno.png",
+        "creators": "OldMartijntje",
+        "readmeUrl": "https://github.com/oldmartijntje/UNO/blob/main/README.md",
+        "userFriendlyness": "",
+        "customizebility": "You add your own cards, you can say how many you want, you can define every card as in: are they special like a + card or a reverse etc.",
+        "scale": "B"
     }
 ];
 
