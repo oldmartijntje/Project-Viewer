@@ -735,6 +735,21 @@ export const projects: Project[] = [
         "userFriendlyness": "",
         "customizebility": "",
         "scale": ""
+    },
+    {
+        "id": 49,
+        "name": "Adventure Map",
+        "description": "A minecraft adventure map using immersive portals and create mod.",
+        "link": "",
+        "status": "unknown",
+        "version": "",
+        "type": "Minecraft",
+        "tumbnail": "assets/images/appTextures/textureMissing.png",
+        "creators": "OldMartijntje",
+        "readmeUrl": "",
+        "userFriendlyness": "",
+        "customizebility": "",
+        "scale": ""
     }
 ];
 
