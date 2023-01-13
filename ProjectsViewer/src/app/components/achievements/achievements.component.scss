@@ -32,6 +32,15 @@
         overflow: hidden;
     }
 
+    &-description {
+        color: var(--item-home-textcolor);
+        font-size: 14px;
+        margin: 5px 5px 5px 5px;
+        white-space: wrap;
+        text-overflow: ellipse;
+        overflow: hidden;
+    }
+
 }
 
 button {

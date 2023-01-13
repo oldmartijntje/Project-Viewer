@@ -18,27 +18,27 @@ import { AchievementsComponent } from './components/achievements/achievements.co
 import { SCTTMComponent } from './components/specials/sct-tm/sct-tm.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    EditProjectComponent,
-    RawViewerComponent,
-    HomeComponent,
-    MenuBarComponent,
-    DetailsComponent,
-    SettingsComponent,
-    InfoComponent,
-    FooterComponent,
-    RedirectComponent,
-    AchievementsComponent,
-    SCTTMComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    FormsModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        EditProjectComponent,
+        RawViewerComponent,
+        HomeComponent,
+        MenuBarComponent,
+        DetailsComponent,
+        SettingsComponent,
+        InfoComponent,
+        FooterComponent,
+        RedirectComponent,
+        AchievementsComponent,
+        SCTTMComponent
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        FormsModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }
