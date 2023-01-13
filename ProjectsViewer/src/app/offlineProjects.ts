@@ -37,7 +37,7 @@ export const projects: Project[] = [
         "description": "An angular web-app with sql server to load all my projects, it also works without the sql server",
         "link": "https://github.com/oldmartijntje/Project-Viewer",
         "status": "On Hold",
-        "version": "",
+        "version": "Beta I guess",
         "type": "Angular, C#",
         "tumbnail": "assets/images/appTextures/viewer.png",
         "creators": "OldMartijntje",
