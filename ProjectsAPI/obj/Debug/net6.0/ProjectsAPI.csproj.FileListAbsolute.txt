@@ -120,3 +120,8 @@ C:\Users\MartijnvanHouwelinge\Documents\Project-Viewer\ProjectsAPI\obj\Debug\net
 C:\Users\MartijnvanHouwelinge\Documents\Project-Viewer\ProjectsAPI\obj\Debug\net6.0\ProjectsAPI.pdb
 C:\Users\MartijnvanHouwelinge\Documents\Project-Viewer\ProjectsAPI\obj\Debug\net6.0\ProjectsAPI.genruntimeconfig.cache
 C:\Users\MartijnvanHouwelinge\Documents\Project-Viewer\ProjectsAPI\obj\Debug\net6.0\ref\ProjectsAPI.dll
+C:\Users\MartijnvanHouwelinge\Documents\Project-Viewer\ProjectsAPI\obj\Debug\net6.0\staticwebassets\msbuild.ProjectsAPI.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\MartijnvanHouwelinge\Documents\Project-Viewer\ProjectsAPI\obj\Debug\net6.0\staticwebassets\msbuild.build.ProjectsAPI.props
+C:\Users\MartijnvanHouwelinge\Documents\Project-Viewer\ProjectsAPI\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.ProjectsAPI.props
+C:\Users\MartijnvanHouwelinge\Documents\Project-Viewer\ProjectsAPI\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.ProjectsAPI.props
+C:\Users\MartijnvanHouwelinge\Documents\Project-Viewer\ProjectsAPI\obj\Debug\net6.0\staticwebassets.pack.json

@@ -51,6 +51,7 @@ namespace ProjectsAPI.Controllers
             dbProject.UserFriendlyness = project.UserFriendlyness;
             dbProject.Customizebility = project.Customizebility;
             dbProject.Scale = project.Scale;
+            dbProject.Data= project.Data;
 
             await _context.SaveChangesAsync();
 

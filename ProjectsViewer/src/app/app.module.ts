@@ -15,6 +15,7 @@ import { InfoComponent } from './components/info/info.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { RedirectComponent } from './components/redirect/redirect.component';
 import { AchievementsComponent } from './components/achievements/achievements.component';
+import { SCTTMComponent } from './components/specials/sct-tm/sct-tm.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { AchievementsComponent } from './components/achievements/achievements.co
     InfoComponent,
     FooterComponent,
     RedirectComponent,
-    AchievementsComponent
+    AchievementsComponent,
+    SCTTMComponent
   ],
   imports: [
     BrowserModule,

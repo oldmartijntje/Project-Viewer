@@ -19,6 +19,7 @@ namespace ProjectsAPI
         public string UserFriendlyness { get; set; } = String.Empty;
         public string Customizebility { get; set; } = String.Empty;
         public string Scale { get; set; } = String.Empty;
+        public string Data { get; set; } = String.Empty;
 
     }
 

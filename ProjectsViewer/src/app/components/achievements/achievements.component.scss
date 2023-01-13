@@ -1,124 +1,124 @@
 .games {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  max-width: 1200px;
-  margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 20px auto;
 }
 
 .game {
-  width: 280px;
-  margin: 10px;
-  height: 260px;
-  overflow: hidden;
-  border-radius: 5px;
-  background-color: var(--item-home-background);
-  box-shadow: 4px 3px 8px 0px var(--item-home-glow);
-  transition-duration: 0.3s;
-  cursor: pointer;
-
-  &:hover {
-    box-shadow: 4px 3px 12px 6px var(--item-home-glow-hover);
-    transform: translateY(-3px)
-  }
-
-  &-name {
-    color: var(--item-home-textcolor);
-    font-weight: 700;
-    font-size: 22px;
-    margin: 5px 5px 5px 5px;
-    white-space: wrap;
-    text-overflow: ellipse;
+    width: 280px;
+    margin: 10px;
+    height: 260px;
     overflow: hidden;
-  }
+    border-radius: 5px;
+    background-color: var(--item-home-background);
+    box-shadow: 4px 3px 8px 0px var(--item-home-glow);
+    transition-duration: 0.3s;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: 4px 3px 12px 6px var(--item-home-glow-hover);
+        transform: translateY(-3px)
+    }
+
+    &-name {
+        color: var(--item-home-textcolor);
+        font-weight: 700;
+        font-size: 22px;
+        margin: 5px 5px 5px 5px;
+        white-space: wrap;
+        text-overflow: ellipse;
+        overflow: hidden;
+    }
 
 }
 
 button {
-  border: none;
-  outline: none;
-  background: var(--home-button-background);
-  padding: 10px;
-  color: var(--home-button-color);
-  font-weight: 700;
-  transition-duration: 0.3s;
-  cursor: pointer;
+    border: none;
+    outline: none;
+    background: var(--home-button-background);
+    padding: 10px;
+    color: var(--home-button-color);
+    font-weight: 700;
+    transition-duration: 0.3s;
+    cursor: pointer;
 
-  &:hover {
-    color: var(--button-color-hover);
-    background: var(--home-button-background-hover);
-  }
+    &:hover {
+        color: var(--button-color-hover);
+        background: var(--home-button-background-hover);
+    }
 
 }
 
 .quick-button {
-  &-right {
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-  }
+    &-right {
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
 
-  &-left {
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-  }
+    &-left {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
 
-  margin-right: 20px;
-  margin-left: 20px;
-  border-radius: 5px;
+    margin-right: 20px;
+    margin-left: 20px;
+    border-radius: 5px;
 }
 
 .navigation {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 .rating {
-  &-bg {
-    border-radius: 5px;
-    background: var(--rating-background);
-  }
-
-  &-og {
     &-bg {
-      border-radius: 5px;
-      background: var(--rating-background-og);
+        border-radius: 5px;
+        background: var(--rating-background);
     }
 
-    color: var(--rating-color-og);
-  }
+    &-og {
+        &-bg {
+            border-radius: 5px;
+            background: var(--rating-background-og);
+        }
 
-  &-s {
-    &-bg {
-      border-radius: 5px;
-      background: var(--rating-background-s);
+        color: var(--rating-color-og);
     }
 
-    color: var(--rating-color-s);
-  }
+    &-s {
+        &-bg {
+            border-radius: 5px;
+            background: var(--rating-background-s);
+        }
 
-  &-s-plus {
-    &-bg {
-      border-radius: 5px;
-      background: var(--rating-background-s-plus);
+        color: var(--rating-color-s);
     }
 
-    color: var(--rating-color-s-plus);
-  }
+    &-s-plus {
+        &-bg {
+            border-radius: 5px;
+            background: var(--rating-background-s-plus);
+        }
 
-  &-a {
-    &-bg {
-      border-radius: 5px;
-      background: var(--rating-background-a);
+        color: var(--rating-color-s-plus);
     }
 
-    color: var(--rating-color-a);
-  }
+    &-a {
+        &-bg {
+            border-radius: 5px;
+            background: var(--rating-background-a);
+        }
 
-  color: var(--rating-color);
+        color: var(--rating-color-a);
+    }
+
+    color: var(--rating-color);
 }
 
 .icon {
-  margin-left: 10px;
-  max-height: 11%;
-  max-width: 11%;
+    margin-left: 10px;
+    max-height: 35px;
+    max-width: 35px;
 }

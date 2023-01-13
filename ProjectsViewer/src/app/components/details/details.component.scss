@@ -1,145 +1,151 @@
 .details-wrapper {
-  max-width: 900px;
-  margin: 20px auto;
-  position: relative;
+    max-width: 900px;
+    margin: 20px auto;
+    position: relative;
 }
 
 .project {
-  &-banner {
-    height: 442px;
-    overflow: hidden;
+    &-banner {
+        height: 442px;
+        overflow: hidden;
 
-    &-img {
-      width: 100%;
-      filter: blur(5px);
-    }
-  }
-
-  &-content {
-    text-align: center;
-    position: relative;
-    top: -200px;
-  }
-
-  &-header {
-    &-title {
-      font-size: 70px;
-      color: var(--details-title-color);
-      font-weight: 700;
-      line-height: 70px;
-      white-space: nowrap;
-      text-shadow: -1px -1px 0 var(--details-title-shadow-color),
-        1px -1px 0 var(--details-title-shadow-color),
-        -1px 1px 0 var(--details-title-shadow-color),
-        1px 1px 0 var(--details-title-shadow-color);
+        &-img {
+            width: 100%;
+            filter: blur(5px);
+        }
     }
 
-    &-version {
-      color: var(--details-version-text-color);
-      font-weight: 700;
-      text-shadow: -1px -1px 0 var(--details-version-text-shadow-color),
-        1px -1px 0 var(--details-version-text-shadow-color),
-        -1px 1px 0 var(--details-version-text-shadow-color),
-        1px 1px 0 var(--details-version-text-shadow-color);
+    &-content {
+        text-align: center;
+        position: relative;
+        top: -200px;
     }
 
-    &-status {
-      color: var(--details-status-text-color);
-      font-weight: 700;
-      text-shadow: -1px -1px 0 var(--details-status-text-shadow-color),
-        1px -1px 0 var(--details-status-text-shadow-color),
-        -1px 1px 0 var(--details-status-text-shadow-color),
-        1px 1px 0 var(--details-status-text-shadow-color);
+    &-header {
+        &-title {
+            font-size: 70px;
+            color: var(--details-title-color);
+            font-weight: 700;
+            line-height: 70px;
+            white-space: nowrap;
+            text-shadow: -1px -1px 0 var(--details-title-shadow-color),
+                1px -1px 0 var(--details-title-shadow-color),
+                -1px 1px 0 var(--details-title-shadow-color),
+                1px 1px 0 var(--details-title-shadow-color);
+        }
+
+        &-version {
+            color: var(--details-version-text-color);
+            font-weight: 700;
+            text-shadow: -1px -1px 0 var(--details-version-text-shadow-color),
+                1px -1px 0 var(--details-version-text-shadow-color),
+                -1px 1px 0 var(--details-version-text-shadow-color),
+                1px 1px 0 var(--details-version-text-shadow-color);
+        }
+
+        &-status {
+            color: var(--details-status-text-color);
+            font-weight: 700;
+            text-shadow: -1px -1px 0 var(--details-status-text-shadow-color),
+                1px -1px 0 var(--details-status-text-shadow-color),
+                -1px 1px 0 var(--details-status-text-shadow-color),
+                1px 1px 0 var(--details-status-text-shadow-color);
+        }
+
+        &-creators {
+            color: var(--details-creators-text-color);
+            font-weight: 700;
+            text-shadow: -1px -1px 0 var(--details-creators-text-shadow-color),
+                1px -1px 0 var(--details-creators-text-shadow-color),
+                -1px 1px 0 var(--details-creators-text-shadow-color),
+                1px 1px 0 var(--details-creators-text-shadow-color);
+        }
+
+        &-genres {
+            color: var(--text-main);
+            font-weight: 700;
+        }
+
+
     }
-
-    &-creators {
-      color: var(--details-creators-text-color);
-      font-weight: 700;
-      text-shadow: -1px -1px 0 var(--details-creators-text-shadow-color),
-        1px -1px 0 var(--details-creators-text-shadow-color),
-        -1px 1px 0 var(--details-creators-text-shadow-color),
-        1px 1px 0 var(--details-creators-text-shadow-color);
-    }
-
-    &-genres {
-      color: var(--text-main);
-      font-weight: 700;
-    }
-
-
-  }
 }
 
 .quick-navigation {
-  &-right {
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    &-right {
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        margin-right: 20px;
+    }
+
+    &-left {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+
     margin-right: 20px;
-  }
-
-  &-left {
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-  }
-
-  margin-right: 20px;
-  border-radius: 5px;
+    border-radius: 5px;
 
 }
 
 .infoPage {
-  background: var(--details-info-background-color);
-  color: var(--details-info-text-color);
-  text-align: left;
-  padding: 10px;
+    background: var(--details-info-background-color);
+    color: var(--details-info-text-color);
+    text-align: left;
+    padding: 10px;
 }
 
 .desctiption-box {
-  margin-top: 20px;
-  margin-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .rating {
-  &-bg {
-    border-radius: 5px;
-    background: var(--rating-background);
-  }
-
-  &-og {
     &-bg {
-      border-radius: 5px;
-      background: var(--rating-background-og);
+        border-radius: 5px;
+        background: var(--rating-background);
     }
 
-    color: var(--rating-color-og);
-  }
+    &-og {
+        &-bg {
+            border-radius: 5px;
+            background: var(--rating-background-og);
+        }
 
-  &-s {
-    &-bg {
-      border-radius: 5px;
-      background: var(--rating-background-s);
+        color: var(--rating-color-og);
     }
 
-    color: var(--rating-color-s);
-  }
+    &-s {
+        &-bg {
+            border-radius: 5px;
+            background: var(--rating-background-s);
+        }
 
-  &-s-plus {
-    &-bg {
-      border-radius: 5px;
-      background: var(--rating-background-s-plus);
+        color: var(--rating-color-s);
     }
 
-    color: var(--rating-color-s-plus);
-  }
+    &-s-plus {
+        &-bg {
+            border-radius: 5px;
+            background: var(--rating-background-s-plus);
+        }
 
-  &-a {
-    &-bg {
-      border-radius: 5px;
-      background: var(--rating-background-a);
+        color: var(--rating-color-s-plus);
     }
 
-    color: var(--rating-color-a);
-  }
+    &-a {
+        &-bg {
+            border-radius: 5px;
+            background: var(--rating-background-a);
+        }
 
-  color: var(--rating-color);
+        color: var(--rating-color-a);
+    }
+
+    color: var(--rating-color);
+}
+
+.icon {
+    margin-left: 10px;
+    max-height: 35px;
+    max-width: 35px;
 }

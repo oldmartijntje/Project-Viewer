@@ -14,7 +14,8 @@ export const projects: Project[] = [
         "readmeUrl": "https://github.com/oldmartijntje/UNO/blob/main/README.md",
         "userFriendlyness": "user friendly unless you try to implement your own things, then it's not user friendly.",
         "customizebility": "You add your own cards, you can say how many you want, you can define every card as in: are they special like a + card or a reverse etc.",
-        "scale": "B"
+        "scale": "B",
+        "data": ""
     },
     {
         "id": 1,
@@ -29,7 +30,8 @@ export const projects: Project[] = [
         "readmeUrl": "",
         "userFriendlyness": "fully user friendly.",
         "customizebility": "It's not customizable since it's a pokemon game.",
-        "scale": "A"
+        "scale": "A",
+        "data": ""
     },
     {
         "id": 2,
@@ -44,7 +46,8 @@ export const projects: Project[] = [
         "readmeUrl": "",
         "userFriendlyness": "",
         "customizebility": "",
-        "scale": "C"
+        "scale": "C",
+        "data": ""
     },
     {
         "id": 3,
@@ -59,7 +62,8 @@ export const projects: Project[] = [
         "readmeUrl": "https://github.com/oldmartijntje/accounts-system/blob/main/README.md",
         "userFriendlyness": "client friendly if implemented correctly. It's not that difficult to implement as described in the readme and examples folder.",
         "customizebility": "You can intergrate it in multiple ways, as explained in the readme as well as in the examples folder.",
-        "scale": "B"
+        "scale": "B",
+        "data": ""
     },
     {
         "id": 4,
@@ -74,7 +78,8 @@ export const projects: Project[] = [
         "readmeUrl": "",
         "userFriendlyness": "user friendly, it's explained well",
         "customizebility": "",
-        "scale": "D"
+        "scale": "D",
+        "data": ""
     },
     {
         "id": 5,
@@ -89,7 +94,8 @@ export const projects: Project[] = [
         "readmeUrl": "https://github.com/oldmartijntje/CodeDungeon/blob/main/README.md",
         "userFriendlyness": "very user friendly, there is a massive readme that explains everything. And even if you don't want to read, just run the installer, run the example.py and see where you can get. (and maybe in the future there is a version where you don't have to program the inputs, where you can just play, or maybe you make it yourself?",
         "customizebility": "You can change almost everything, add almost everything, very customizable. everything is explained in my readme.",
-        "scale": "S"
+        "scale": "S",
+        "data": ""
     },
     {
         "id": 6,
@@ -104,7 +110,8 @@ export const projects: Project[] = [
         "readmeUrl": "",
         "userFriendlyness": "pretty straight forward. Unless you don't know what an IP adress is.",
         "customizebility": "I mean you can implement it in a lot, if you know a bit of coding.",
-        "scale": "C"
+        "scale": "C",
+        "data": ""
     },
     {
         "id": 7,
@@ -119,7 +126,8 @@ export const projects: Project[] = [
         "readmeUrl": "",
         "userFriendlyness": "",
         "customizebility": "",
-        "scale": ""
+        "scale": "",
+        "data": ""
     },
     {
         "id": 8,
@@ -134,7 +142,8 @@ export const projects: Project[] = [
         "readmeUrl": "https://youtu.be/LAXe4MJEs-o",
         "userFriendlyness": "",
         "customizebility": "",
-        "scale": "B"
+        "scale": "B",
+        "data": ""
     },
     {
         "id": 9,
@@ -149,7 +158,8 @@ export const projects: Project[] = [
         "readmeUrl": "https://github.com/oldmartijntje/The-Game/blob/master/README.md",
         "userFriendlyness": "Pretty self explanetory, and the readme helps",
         "customizebility": "some settings in the readme",
-        "scale": "D"
+        "scale": "D",
+        "data": ""
     },
     {
         "id": 10,
@@ -164,7 +174,8 @@ export const projects: Project[] = [
         "readmeUrl": "",
         "userFriendlyness": "",
         "customizebility": "",
-        "scale": ""
+        "scale": "",
+        "data": ""
     },
     {
         "id": 11,
@@ -179,7 +190,8 @@ export const projects: Project[] = [
         "readmeUrl": "",
         "userFriendlyness": "Yeah it's explained quite well, i think?",
         "customizebility": "",
-        "scale": "OG"
+        "scale": "OG",
+        "data": ""
     },
     {
         "id": 13,
@@ -194,7 +206,8 @@ export const projects: Project[] = [
         "readmeUrl": "",
         "userFriendlyness": "",
         "customizebility": "",
-        "scale": ""
+        "scale": "",
+        "data": ""
     },
     {
         "id": 16,
@@ -209,7 +222,8 @@ export const projects: Project[] = [
         "readmeUrl": "",
         "userFriendlyness": "",
         "customizebility": "",
-        "scale": ""
+        "scale": "",
+        "data": ""
     },
     {
         "id": 18,
@@ -224,7 +238,8 @@ export const projects: Project[] = [
         "readmeUrl": "",
         "userFriendlyness": "client friendly, just do what it says",
         "customizebility": "",
-        "scale": ""
+        "scale": "",
+        "data": ""
     },
     {
         "id": 19,
@@ -239,7 +254,8 @@ export const projects: Project[] = [
         "readmeUrl": "",
         "userFriendlyness": "user friendly, but u only need to fill in a name, that's all",
         "customizebility": "",
-        "scale": ""
+        "scale": "",
+        "data": ""
     },
     {
         "id": 20,
@@ -254,7 +270,8 @@ export const projects: Project[] = [
         "readmeUrl": "",
         "userFriendlyness": "",
         "customizebility": "",
-        "scale": ""
+        "scale": "",
+        "data": ""
     },
     {
         "id": 21,
@@ -269,7 +286,8 @@ export const projects: Project[] = [
         "readmeUrl": "",
         "userFriendlyness": "",
         "customizebility": "",
-        "scale": ""
+        "scale": "",
+        "data": ""
     },
     {
         "id": 22,
@@ -284,7 +302,8 @@ export const projects: Project[] = [
         "readmeUrl": "",
         "userFriendlyness": "",
         "customizebility": "",
-        "scale": ""
+        "scale": "",
+        "data": ""
     },
     {
         "id": 23,
@@ -299,7 +318,8 @@ export const projects: Project[] = [
         "readmeUrl": "",
         "userFriendlyness": "",
         "customizebility": "",
-        "scale": ""
+        "scale": "",
+        "data": ""
     },
     {
         "id": 24,
@@ -314,7 +334,8 @@ export const projects: Project[] = [
         "readmeUrl": "",
         "userFriendlyness": "",
         "customizebility": "",
-        "scale": ""
+        "scale": "",
+        "data": ""
     },
     {
         "id": 25,
@@ -329,7 +350,8 @@ export const projects: Project[] = [
         "readmeUrl": "",
         "userFriendlyness": "",
         "customizebility": "",
-        "scale": ""
+        "scale": "",
+        "data": ""
     },
     {
         "id": 26,
@@ -344,7 +366,8 @@ export const projects: Project[] = [
         "readmeUrl": "",
         "userFriendlyness": "",
         "customizebility": "",
-        "scale": ""
+        "scale": "",
+        "data": ""
     },
     {
         "id": 27,
@@ -359,7 +382,8 @@ export const projects: Project[] = [
         "readmeUrl": "",
         "userFriendlyness": "",
         "customizebility": "",
-        "scale": ""
+        "scale": "",
+        "data": ""
     },
     {
         "id": 28,
@@ -374,7 +398,8 @@ export const projects: Project[] = [
         "readmeUrl": "",
         "userFriendlyness": "",
         "customizebility": "",
-        "scale": ""
+        "scale": "",
+        "data": ""
     },
     {
         "id": 29,
@@ -389,7 +414,8 @@ export const projects: Project[] = [
         "readmeUrl": "",
         "userFriendlyness": "",
         "customizebility": "You can add as many words and centances as you wish",
-        "scale": ""
+        "scale": "",
+        "data": ""
     },
     {
         "id": 30,
@@ -404,7 +430,8 @@ export const projects: Project[] = [
         "readmeUrl": "",
         "userFriendlyness": "",
         "customizebility": "",
-        "scale": ""
+        "scale": "",
+        "data": ""
     },
     {
         "id": 31,
@@ -419,7 +446,8 @@ export const projects: Project[] = [
         "readmeUrl": "",
         "userFriendlyness": "",
         "customizebility": "",
-        "scale": ""
+        "scale": "",
+        "data": ""
     },
     {
         "id": 32,
@@ -434,7 +462,8 @@ export const projects: Project[] = [
         "readmeUrl": "",
         "userFriendlyness": "",
         "customizebility": "",
-        "scale": ""
+        "scale": "",
+        "data": ""
     },
     {
         "id": 33,
@@ -449,7 +478,8 @@ export const projects: Project[] = [
         "readmeUrl": "",
         "userFriendlyness": "",
         "customizebility": "",
-        "scale": ""
+        "scale": "",
+        "data": ""
     },
     {
         "id": 34,
@@ -464,7 +494,8 @@ export const projects: Project[] = [
         "readmeUrl": "",
         "userFriendlyness": "",
         "customizebility": "",
-        "scale": ""
+        "scale": "",
+        "data": ""
     },
     {
         "id": 35,
@@ -479,7 +510,8 @@ export const projects: Project[] = [
         "readmeUrl": "",
         "userFriendlyness": "",
         "customizebility": "",
-        "scale": "C"
+        "scale": "C",
+        "data": ""
     },
     {
         "id": 36,
@@ -494,7 +526,8 @@ export const projects: Project[] = [
         "readmeUrl": "",
         "userFriendlyness": "user friendly, It's just a function, you put in an array and an int as arguments, and it rotates the erray 90 degrres times the intager you also gave as input.",
         "customizebility": "",
-        "scale": ""
+        "scale": "",
+        "data": ""
     },
     {
         "id": 37,
@@ -509,7 +542,8 @@ export const projects: Project[] = [
         "readmeUrl": "",
         "userFriendlyness": "user friendly, just search for a game, apply some filters, or click the random game button. Scroll down to see settings.",
         "customizebility": "You can change the app color theme, though the themes aren't the best design wise",
-        "scale": "E"
+        "scale": "E",
+        "data": ""
     },
     {
         "id": 38,
@@ -524,7 +558,8 @@ export const projects: Project[] = [
         "readmeUrl": "",
         "userFriendlyness": "",
         "customizebility": "",
-        "scale": ""
+        "scale": "",
+        "data": ""
     },
     {
         "id": 39,
@@ -539,7 +574,8 @@ export const projects: Project[] = [
         "readmeUrl": "",
         "userFriendlyness": "",
         "customizebility": "",
-        "scale": ""
+        "scale": "",
+        "data": "sct-tm|"
     },
     {
         "id": 40,
@@ -554,7 +590,8 @@ export const projects: Project[] = [
         "readmeUrl": "https://youtu.be/4F9SEL7j_CY",
         "userFriendlyness": "",
         "customizebility": "",
-        "scale": "E"
+        "scale": "E",
+        "data": ""
     },
     {
         "id": 41,
@@ -569,7 +606,8 @@ export const projects: Project[] = [
         "readmeUrl": "",
         "userFriendlyness": "",
         "customizebility": "",
-        "scale": ""
+        "scale": "",
+        "data": ""
     },
     {
         "id": 42,
@@ -584,7 +622,8 @@ export const projects: Project[] = [
         "readmeUrl": "",
         "userFriendlyness": "",
         "customizebility": "",
-        "scale": ""
+        "scale": "",
+        "data": ""
     },
     {
         "id": 43,
@@ -599,7 +638,8 @@ export const projects: Project[] = [
         "readmeUrl": "",
         "userFriendlyness": "",
         "customizebility": "",
-        "scale": ""
+        "scale": "",
+        "data": ""
     },
     {
         "id": 44,
@@ -614,7 +654,8 @@ export const projects: Project[] = [
         "readmeUrl": "",
         "userFriendlyness": "",
         "customizebility": "",
-        "scale": ""
+        "scale": "",
+        "data": ""
     },
     {
         "id": 45,
@@ -629,7 +670,8 @@ export const projects: Project[] = [
         "readmeUrl": "",
         "userFriendlyness": "",
         "customizebility": "",
-        "scale": ""
+        "scale": "",
+        "data": ""
     },
     {
         "id": 46,
@@ -644,7 +686,8 @@ export const projects: Project[] = [
         "readmeUrl": "https://github.com/oldmartijntje/UNO/blob/main/README.md",
         "userFriendlyness": "",
         "customizebility": "Whatever the api can do probably.",
-        "scale": ""
+        "scale": "",
+        "data": ""
     },
     {
         "id": 47,
@@ -659,7 +702,8 @@ export const projects: Project[] = [
         "readmeUrl": "https://github.com/oldmartijntje/UNO/blob/main/README.md",
         "userFriendlyness": "",
         "customizebility": "Right now you can change how every bot thinks.",
-        "scale": ""
+        "scale": "",
+        "data": ""
     },
     {
         "id": 48,
@@ -674,7 +718,8 @@ export const projects: Project[] = [
         "readmeUrl": "",
         "userFriendlyness": "",
         "customizebility": "",
-        "scale": ""
+        "scale": "",
+        "data": ""
     },
     {
         "id": 49,
@@ -689,7 +734,8 @@ export const projects: Project[] = [
         "readmeUrl": "",
         "userFriendlyness": "",
         "customizebility": "",
-        "scale": ""
+        "scale": "",
+        "data": ""
     }
 ];
 

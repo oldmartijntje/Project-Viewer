@@ -1,0 +1,41 @@
+.showDefault {
+    cursor: default;
+    display: table-cell;
+    width: 42px;
+    height: 42px;
+    margin: 0 5px;
+}
+
+.showWait {
+    padding: 1px;
+    cursor: wait;
+    display: table-cell;
+    width: 42px;
+    height: 42px;
+    margin: 0 5px;
+}
+
+button {
+    margin-left: 15%;
+    max-width: 80%;
+    background-color: var(--safety_green);
+}
+
+.button_icon,
+button {
+    color: var(--button_text_color);
+    padding: 0px;
+}
+
+button {
+    margin-left: 0px;
+    max-width: 100%;
+    cursor: pointer;
+    border-style: none;
+}
+
+.button-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(10%, 1fr));
+}
