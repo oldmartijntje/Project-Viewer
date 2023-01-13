@@ -1,48 +1,59 @@
 <div *ngIf="selectedProjects.length > 0">
-  <div class="games">
-    <ng-container *ngFor="let project of selectedProjects">
-      <div class="game" (click)="openProjectDetails(project.id)">
-        <div class="game-thumb-container">
-          <img *ngIf="project.tumbnail" src="{{ project.tumbnail }}" alt="thumbnail" class="game-thumbnail">
-          <img *ngIf="!project.tumbnail" src="assets\images\appTextures\textureMissing.png"
-            alt="missing texture texture missing" class="game-thumbnail">
-        </div>
-        <div class="game-description">
-          <div *ngIf="project.scale" class="rating-box">
-            <div class="rating-bg"
-              *ngIf="project.scale != 'OG' && project.scale != 'S' && project.scale != 'S+' && project.scale != 'A'">
-              <p class="rating">Rating: {{project.scale}}</p>
+    <div class="games">
+        <ng-container *ngFor="let project of selectedProjects">
+            <div class="game" (click)="openProjectDetails(project.id)">
+                <div class="game-thumb-container">
+                    <img *ngIf="project.tumbnail" src="{{ project.tumbnail }}" alt="thumbnail" class="game-thumbnail">
+                    <img *ngIf="!project.tumbnail" src="assets\images\appTextures\textureMissing.png"
+                        alt="missing texture texture missing" class="game-thumbnail">
+                </div>
+                <div class="game-description">
+                    <div *ngIf="project.scale" class="rating-box">
+                        <div class="rating-bg"
+                            *ngIf="project.scale != 'OG' && project.scale != 'S' && project.scale != 'S+' && project.scale != 'A'">
+                            <p class="rating">Rating: {{project.scale}}</p>
+                        </div>
+                        <div *ngIf="project.scale == 'OG'" class="rating-og-bg">
+                            <p class="rating-og">Rating: {{project.scale}}</p>
+                        </div>
+                        <div *ngIf="project.scale == 'S+'" class="rating-s-plus-bg">
+                            <p class="rating-s-plus">Rating: {{project.scale}}</p>
+                        </div>
+                        <div *ngIf="project.scale == 'S'" class="rating-s-bg">
+                            <p class="rating-s">Rating: {{project.scale}}</p>
+                        </div>
+                        <div *ngIf="project.scale == 'A'" class="rating-a-bg">
+                            <p class="rating-a">Rating: {{project.scale}}</p>
+                        </div>
+                    </div>
+                    <p *ngIf="project.name" class="game-name">{{ project.name }}</p>
+                    <p *ngIf="!project.name" class="game-name">Unnamed</p>
+                    <div class="iconBox">
+                        <img class="icon" *ngIf="!project.link && !project.readmeUrl"
+                            src="assets/images/icon/noLink.png" alt="No link">
+                        <div class="iconBox" *ngFor="let icon of typeIcons">
+                            <img class="icon" *ngIf="project.type.includes(icon)"
+                                src="assets/images/icon/{{inconRedirect[icon]}}.png" alt="{{icon}}">
+                        </div>
+                        <div class="iconBox" *ngFor="let icon of statusIcons">
+                            <img class="icon" *ngIf="project.status.includes(icon)"
+                                src="assets/images/icon/{{inconRedirect[icon]}}.png" alt="{{icon}}">
+                        </div>
+                    </div>
+
+                </div>
             </div>
-            <div *ngIf="project.scale == 'OG'" class="rating-og-bg">
-              <p class="rating-og">Rating: {{project.scale}}</p>
-            </div>
-            <div *ngIf="project.scale == 'S+'" class="rating-s-plus-bg">
-              <p class="rating-s-plus">Rating: {{project.scale}}</p>
-            </div>
-            <div *ngIf="project.scale == 'S'" class="rating-s-bg">
-              <p class="rating-s">Rating: {{project.scale}}</p>
-            </div>
-            <div *ngIf="project.scale == 'A'" class="rating-a-bg">
-              <p class="rating-a">Rating: {{project.scale}}</p>
-            </div>
-          </div>
-          <p *ngIf="project.name" class="game-name">{{ project.name }}</p>
-          <p *ngIf="!project.name" class="game-name">Unnamed</p>
-          <img class="icon" *ngIf="!project.link && !project.readmeUrl" src="assets/images/icon/noLink.png"
-            alt="No link">
-        </div>
-      </div>
-    </ng-container>
-  </div>
-  <div class="navigation">
-    <button class="quick-button" (click)="moveToPage(1)">First Page</button>
-    <button class="quick-button-left" (click)="nextPage(-1)">&lt;</button>
-    <button>Page</button>
-    <button class="quick-button-right" (click)="nextPage(1)">&gt;</button>
-    <button class="quick-button" (click)="moveToPage(maxPages)">Last Page</button>
-  </div>
+        </ng-container>
+    </div>
+    <div class="navigation">
+        <button class="quick-button" (click)="moveToPage(1)">First Page</button>
+        <button class="quick-button-left" (click)="nextPage(-1)">&lt;</button>
+        <button>Page</button>
+        <button class="quick-button-right" (click)="nextPage(1)">&gt;</button>
+        <button class="quick-button" (click)="moveToPage(maxPages)">Last Page</button>
+    </div>
 </div>
 <div *ngIf="selectedProjects.length == 0">
-  <h1>Hmm looks empty, just like your bed :)</h1>
-  <p>The server is either empty or turned off.</p>
+    <h1>Hmm looks empty, just like your bed :)</h1>
+    <p>The server is either empty or turned off.</p>
 </div>
