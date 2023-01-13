@@ -5,7 +5,12 @@
                 <p class="game-name">{{ achievement.name }}</p>
             </div>
             <div class="game-description">
-                <p>{{ achievement.description }}</p>
+                <p *ngIf="achievement.description != 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'">{{
+                    achievement.description }}</p>
+                <iframe *ngIf="achievement.description == 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'"
+                    src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
             </div>
             <img class="icon" src="assets/images/icon/star.png" alt="You found this one">
         </div>
@@ -14,7 +19,12 @@
                 <p class="game-name">{{ achievement.BUName }}</p>
             </div>
             <div class="game-description">
-                <p>{{ achievement.BUDescription }}</p>
+                <p *ngIf="achievement.BUDescription != 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'">{{
+                    achievement.BUDescription }}</p>
+                <iframe *ngIf="achievement.BUDescription == 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'"
+                    src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
             </div>
         </div>
     </ng-container>

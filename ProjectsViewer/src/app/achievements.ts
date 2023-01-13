@@ -33,5 +33,13 @@ export const Achievements: Achievement[] = [
         "BUName": "404 not found",
         "BUDescription": "SafetyCT easteregg",
         "Hidden": false
+    },
+    {
+        "name": "Rickroll :D",
+        "description": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "cookie": "ProjectsViewer.achievement.Rickroll",
+        "BUName": "???",
+        "BUDescription": "???",
+        "Hidden": false
     }
 ]
