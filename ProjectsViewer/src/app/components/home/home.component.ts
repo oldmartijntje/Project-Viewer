@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { elementAt, Subscription } from 'rxjs';
 import { Project } from 'src/app/models/project';
 import { ProjectService } from 'src/app/services/project.service';
 import { CookieService } from 'ngx-cookie-service';
@@ -29,13 +29,14 @@ export class HomeComponent implements OnInit, OnDestroy {
         "Cancelled": "none"
     }
     title = 'ProjectsViewer';
-    projects: Project[] = [];
+    loadedProjects: Project[] = [];
     projectServiceSubsription: Subscription;
     routeSub: Subscription;
     pageNumber: number;
     selectedProjects: Project[] = [];
     maxNumberPerPage = 12;
     maxPages: number;
+    disableCancelled = true;
 
     constructor(private ActivatedRoute: ActivatedRoute, private projectService: ProjectService, private cookieService: CookieService, private router: Router) { }
 
@@ -62,16 +63,32 @@ export class HomeComponent implements OnInit, OnDestroy {
             }
         });
         if (this.cookieService.get('ProjectsViewer.mode') === 'Offline') {
-            this.projects = projects;
-            this.selectedProjects = this.projects.slice((this.pageNumber - 1) * this.maxNumberPerPage, (this.pageNumber - 1) * this.maxNumberPerPage + this.maxNumberPerPage);
-            this.maxPages = Math.ceil(this.projects.length / this.maxNumberPerPage);
+            this.loadedProjects = [...projects];
+            this.loadedProjects = this.loadedProjects.reverse();
+            console.log([...this.loadedProjects])
+            if (this.disableCancelled) {
+                this.loadedProjects.forEach(element => {
+                    if (element.status.toLowerCase().includes("Cancelled".toLowerCase())) {
+                        console.log(element);
+                        const index = this.loadedProjects.indexOf(element, 0);
+                        if (index > -1) {
+                            this.loadedProjects.splice(index, 0);
+                        }
+
+                    }
+                });
+            }
+
+            this.selectedProjects = this.loadedProjects.slice((this.pageNumber - 1) * this.maxNumberPerPage, (this.pageNumber - 1) * this.maxNumberPerPage + this.maxNumberPerPage);
+            this.maxPages = Math.ceil(this.loadedProjects.length / this.maxNumberPerPage);
         } else {
             this.projectServiceSubsription = this.projectService
                 .getProjects()
                 .subscribe((result: Project[]) => {
-                    this.projects = result;
-                    this.selectedProjects = this.projects.slice((this.pageNumber - 1) * this.maxNumberPerPage, (this.pageNumber - 1) * this.maxNumberPerPage + this.maxNumberPerPage);
-                    this.maxPages = Math.ceil(this.projects.length / this.maxNumberPerPage);
+                    this.loadedProjects = [...result];
+                    this.loadedProjects = this.loadedProjects.reverse();
+                    this.selectedProjects = this.loadedProjects.slice((this.pageNumber - 1) * this.maxNumberPerPage, (this.pageNumber - 1) * this.maxNumberPerPage + this.maxNumberPerPage);
+                    this.maxPages = Math.ceil(this.loadedProjects.length / this.maxNumberPerPage);
                 });
         }
     }
