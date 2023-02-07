@@ -566,7 +566,7 @@ export const projects: Project[] = [
         "name": "SafetyCT - TrainingsModule",
         "description": "The rebuilding of the SafetyCT testing module, that later gets turned into the DCU app",
         "link": "",
-        "status": "In Progress",
+        "status": "Completed",
         "version": "",
         "type": "Angular",
         "tumbnail": "assets/images/appTextures/training.png",
