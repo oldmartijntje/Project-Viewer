@@ -30,13 +30,15 @@ export class HomeComponent implements OnInit, OnDestroy {
     }
     title = 'ProjectsViewer';
     loadedProjects: Project[] = [];
+    loadedProjectsToStore: Project[] = [];
     projectServiceSubsription: Subscription;
     routeSub: Subscription;
     pageNumber: number;
     selectedProjects: Project[] = [];
     maxNumberPerPage = 12;
     maxPages: number;
-    disableCancelled = true;
+    filterText = "";
+    filterTextInput: string = "";
 
     constructor(private ActivatedRoute: ActivatedRoute, private projectService: ProjectService, private cookieService: CookieService, private router: Router) { }
 
@@ -65,32 +67,33 @@ export class HomeComponent implements OnInit, OnDestroy {
         if (this.cookieService.get('ProjectsViewer.mode') === 'Offline') {
             this.loadedProjects = [...projects];
             this.loadedProjects = this.loadedProjects.reverse();
-            console.log([...this.loadedProjects])
-            if (this.disableCancelled) {
-                this.loadedProjects.forEach(element => {
-                    if (element.status.toLowerCase().includes("Cancelled".toLowerCase())) {
-                        console.log(element);
-                        const index = this.loadedProjects.indexOf(element, 0);
-                        if (index > -1) {
-                            this.loadedProjects.splice(index, 0);
-                        }
-
-                    }
-                });
-            }
-
-            this.selectedProjects = this.loadedProjects.slice((this.pageNumber - 1) * this.maxNumberPerPage, (this.pageNumber - 1) * this.maxNumberPerPage + this.maxNumberPerPage);
-            this.maxPages = Math.ceil(this.loadedProjects.length / this.maxNumberPerPage);
+            this.loadedProjectsToStore = [...this.loadedProjects];
+            this.filterAndGetPage();
         } else {
             this.projectServiceSubsription = this.projectService
                 .getProjects()
                 .subscribe((result: Project[]) => {
                     this.loadedProjects = [...result];
                     this.loadedProjects = this.loadedProjects.reverse();
-                    this.selectedProjects = this.loadedProjects.slice((this.pageNumber - 1) * this.maxNumberPerPage, (this.pageNumber - 1) * this.maxNumberPerPage + this.maxNumberPerPage);
-                    this.maxPages = Math.ceil(this.loadedProjects.length / this.maxNumberPerPage);
+                    this.loadedProjectsToStore = [...this.loadedProjects];
+                    this.filterAndGetPage();
                 });
         }
+    }
+
+    filterAndGetPage() {
+        if (this.filterText.length > 0) {
+            for (let index = 0; index < this.loadedProjects.length; index++) {
+                if (this.loadedProjects[index].status.includes("Cancelled")) {
+                    this.loadedProjects.splice(index, 1);
+                    index--;
+                }
+
+            }
+        }
+
+        this.selectedProjects = this.loadedProjects.slice((this.pageNumber - 1) * this.maxNumberPerPage, (this.pageNumber - 1) * this.maxNumberPerPage + this.maxNumberPerPage);
+        this.maxPages = Math.ceil(this.loadedProjects.length / this.maxNumberPerPage);
     }
 
     openProjectDetails(id: number): void {
@@ -110,6 +113,12 @@ export class HomeComponent implements OnInit, OnDestroy {
         if (y + number > 0 && y + number <= this.maxPages) {
             this.moveToPage(y + number)
         }
+    }
+
+    sendTheNewValue(event) {
+        this.filterText = event.target.value;
+        this.loadedProjects = [...this.loadedProjectsToStore]
+        this.filterAndGetPage();
     }
 
 

@@ -1,4 +1,6 @@
 <div *ngIf="selectedProjects.length > 0">
+    <h2>Filters:</h2>
+    <input type="text" [(ngModel)]="filterTextInput" (input)="sendTheNewValue($event)">
     <div class="games">
         <ng-container *ngFor="let project of selectedProjects">
             <div class="game" (click)="openProjectDetails(project.id)">
