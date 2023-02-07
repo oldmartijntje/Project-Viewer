@@ -1,6 +1,6 @@
+<h2>Filters:</h2>
+<input type="text" [(ngModel)]="filterTextInput" (input)="sendTheNewValue($event)" (blur)="saveInput()">
 <div *ngIf="selectedProjects.length > 0">
-    <h2>Filters:</h2>
-    <input type="text" [(ngModel)]="filterTextInput" (input)="sendTheNewValue($event)">
     <div class="games">
         <ng-container *ngFor="let project of selectedProjects">
             <div class="game" (click)="openProjectDetails(project.id)">
@@ -33,11 +33,11 @@
                     <div class="iconBox">
                         <img class="icon" *ngIf="!project.link && !project.readmeUrl"
                             src="assets/images/icon/noLink.png" alt="No link">
-                        <div class="iconBox" *ngFor="let icon of typeIcons">
+                        <div class="iconBox" *ngFor="let icon of listOfTypes">
                             <img class="icon" *ngIf="project.type.includes(icon)"
                                 src="assets/images/icon/{{inconRedirect[icon]}}.png" alt="{{icon}}">
                         </div>
-                        <div class="iconBox" *ngFor="let icon of statusIcons">
+                        <div class="iconBox" *ngFor="let icon of listOfStatuses">
                             <img class="icon" *ngIf="project.status.includes(icon)"
                                 src="assets/images/icon/{{inconRedirect[icon]}}.png" alt="{{icon}}">
                         </div>

@@ -12,8 +12,8 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
     styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit, OnDestroy {
-    typeIcons = ["Python", "Angular", "rpg maker xp", "Pokemon Essentials", "Scratch", "Minecraft", "C#", "NSMB Editor"]
-    statusIcons = ["In Progress", "Completed", "On Hold", "Cancelled"]
+    listOfTypes = ["Python", "Angular", "rpg maker xp", "Pokemon Essentials", "Scratch", "Minecraft", "C#", "NSMB Editor"]
+    listOfStatuses = ["In Progress", "Completed", "On Hold", "Cancelled"]
     inconRedirect = {
         "Python": "Python",
         "Angular": "Angular",
@@ -52,6 +52,12 @@ export class HomeComponent implements OnInit, OnDestroy {
     }
 
     ngOnInit(): void {
+        if (this.cookieService.check("filterTexInput")) {
+            this.filterText = this.cookieService.get("filterTexInput");
+            this.filterTextInput = this.filterText;
+        } else {
+            this.cookieService.set("filterTexInput", this.filterText);
+        }
         this.routeSub = this.ActivatedRoute.params.subscribe((params: Params) => {
             if (params['pageNumber'] != undefined) {
                 if (!isNaN(params['pageNumber'])) {
@@ -84,14 +90,28 @@ export class HomeComponent implements OnInit, OnDestroy {
     filterAndGetPage() {
         if (this.filterText.length > 0) {
             for (let index = 0; index < this.loadedProjects.length; index++) {
-                if (this.loadedProjects[index].status.includes("Cancelled")) {
-                    this.loadedProjects.splice(index, 1);
-                    index--;
-                }
-
+                this.listOfTypes.forEach(element => {
+                    if (index > -1 && this.filterText.toLocaleLowerCase().includes(`!${element}`.toLocaleLowerCase()) && this.loadedProjects[index].type.toLocaleLowerCase().includes(`${element}`.toLocaleLowerCase())) {
+                        this.loadedProjects.splice(index, 1);
+                        index--;
+                    }
+                    if (index > -1 && this.filterText.toLocaleLowerCase().includes(`${element}`.toLocaleLowerCase()) && !this.filterText.toLocaleLowerCase().includes(`!${element}`.toLocaleLowerCase()) && !this.loadedProjects[index].type.toLocaleLowerCase().includes(`${element}`.toLocaleLowerCase())) {
+                        this.loadedProjects.splice(index, 1);
+                        index--;
+                    }
+                });
+                this.listOfStatuses.forEach(element => {
+                    if (index > -1 && this.filterText.toLocaleLowerCase().includes(`!${element}`.toLocaleLowerCase()) && this.loadedProjects[index].status.toLocaleLowerCase().includes(`${element}`.toLocaleLowerCase())) {
+                        this.loadedProjects.splice(index, 1);
+                        index--;
+                    }
+                    if (index > -1 && this.filterText.toLocaleLowerCase().includes(`${element}`.toLocaleLowerCase()) && !this.filterText.toLocaleLowerCase().includes(`!${element}`.toLocaleLowerCase()) && !this.loadedProjects[index].status.toLocaleLowerCase().includes(`${element}`.toLocaleLowerCase())) {
+                        this.loadedProjects.splice(index, 1);
+                        index--;
+                    }
+                });
             }
         }
-
         this.selectedProjects = this.loadedProjects.slice((this.pageNumber - 1) * this.maxNumberPerPage, (this.pageNumber - 1) * this.maxNumberPerPage + this.maxNumberPerPage);
         this.maxPages = Math.ceil(this.loadedProjects.length / this.maxNumberPerPage);
     }
@@ -105,6 +125,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     }
 
     moveToPage(pageNumber: number): void {
+        this.saveInput();
         this.router.navigate(['r', pageNumber]);
     }
 
@@ -119,6 +140,10 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.filterText = event.target.value;
         this.loadedProjects = [...this.loadedProjectsToStore]
         this.filterAndGetPage();
+    }
+
+    saveInput() {
+        this.cookieService.set("filterTexInput", this.filterText);
     }
 
 
