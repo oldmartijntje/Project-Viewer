@@ -37,7 +37,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     selectedProjects: Project[] = [];
     maxNumberPerPage = 12;
     maxPages: number;
-    filterText = "";
+    filterText = "!cancelled !scratch !NSMB Editor !minecraft";
     filterTextInput: string = "";
 
     constructor(private ActivatedRoute: ActivatedRoute, private projectService: ProjectService, private cookieService: CookieService, private router: Router) { }
