@@ -12,7 +12,7 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
     styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit, OnDestroy {
-    listOfTypes = ["Python", "Angular", "rpg maker xp", "Pokemon Essentials", "Scratch", "Minecraft", "C#", "NSMB Editor"]
+    listOfTypes = ["Python", "Angular", "rpg maker xp", "Pokemon Essentials", "Scratch", "Minecraft", "C#", "NSMB Editor", "TS", "Typescript", "CSS", "HTML", "JS", "Javascript", "PHP"]
     listOfStatuses = ["In Progress", "Completed", "On Hold", "Cancelled"]
     inconRedirect = {
         "Python": "Python",
@@ -26,7 +26,14 @@ export class HomeComponent implements OnInit, OnDestroy {
         "In Progress": "dev",
         "Completed": "checkmark",
         "On Hold": "pause",
-        "Cancelled": "none"
+        "Cancelled": "none",
+        "CSS": "css ico",
+        "HTML": "html ico",
+        "JS": "js ico",
+        "Javascript": "js ico",
+        "PHP": "php cute",
+        "Typescript": "ts ico",
+        "TS": "ts ico"
     }
     title = 'ProjectsViewer';
     loadedProjects: Project[] = [];

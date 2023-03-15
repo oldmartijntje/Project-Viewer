@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\MartijnvanHouwelinge\\Documents\\Project-Viewer\\ProjectsAPI\\ProjectsAPI.csproj": {}
+    "C:\\Users\\oldma\\Desktop\\scripts\\Repos\\Project-Viewer\\ProjectsAPI\\ProjectsAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\MartijnvanHouwelinge\\Documents\\Project-Viewer\\ProjectsAPI\\ProjectsAPI.csproj": {
+    "C:\\Users\\oldma\\Desktop\\scripts\\Repos\\Project-Viewer\\ProjectsAPI\\ProjectsAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MartijnvanHouwelinge\\Documents\\Project-Viewer\\ProjectsAPI\\ProjectsAPI.csproj",
+        "projectUniqueName": "C:\\Users\\oldma\\Desktop\\scripts\\Repos\\Project-Viewer\\ProjectsAPI\\ProjectsAPI.csproj",
         "projectName": "ProjectsAPI",
-        "projectPath": "C:\\Users\\MartijnvanHouwelinge\\Documents\\Project-Viewer\\ProjectsAPI\\ProjectsAPI.csproj",
-        "packagesPath": "C:\\Users\\MartijnvanHouwelinge\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MartijnvanHouwelinge\\Documents\\Project-Viewer\\ProjectsAPI\\obj\\",
+        "projectPath": "C:\\Users\\oldma\\Desktop\\scripts\\Repos\\Project-Viewer\\ProjectsAPI\\ProjectsAPI.csproj",
+        "packagesPath": "C:\\Users\\oldma\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\oldma\\Desktop\\scripts\\Repos\\Project-Viewer\\ProjectsAPI\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\MartijnvanHouwelinge\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\oldma\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,9 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://nuget.telerik.com/v3/index.json": {},
-          "https://pkgs.dev.azure.com/SafetyCT/SafetyConnect/_packaging/SafetyConnect_NuGetFeed/nuget/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
@@ -73,8 +75,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -86,7 +87,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
