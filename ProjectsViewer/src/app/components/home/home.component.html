@@ -34,11 +34,11 @@
                         <img class="icon" *ngIf="!project.link && !project.readmeUrl"
                             src="assets/images/icon/noLink.png" alt="No link">
                         <div class="iconBox" *ngFor="let icon of listOfTypes">
-                            <img class="icon" *ngIf="project.type.includes(icon)"
+                            <img class="icon" *ngIf="project.type.includes(icon)" title="{{icon}}"
                                 src="assets/images/icon/{{inconRedirect[icon]}}.png" alt="{{icon}}">
                         </div>
                         <div class="iconBox" *ngFor="let icon of listOfStatuses">
-                            <img class="icon" *ngIf="project.status.includes(icon)"
+                            <img class="icon" *ngIf="project.status.includes(icon)" title="{{icon}}"
                                 src="assets/images/icon/{{inconRedirect[icon]}}.png" alt="{{icon}}">
                         </div>
                     </div>

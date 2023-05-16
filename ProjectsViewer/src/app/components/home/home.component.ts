@@ -13,7 +13,7 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 })
 export class HomeComponent implements OnInit, OnDestroy {
     listOfTypes = ["Python", "Angular", "rpg maker xp", "Pokemon Essentials", "Scratch", "Minecraft", "C#", "NSMB Editor", "TS", "Typescript", "CSS", "HTML", "JS", "Javascript", "PHP"]
-    listOfStatuses = ["In Progress", "Completed", "On Hold", "Cancelled"]
+    listOfStatuses = ["In Progress", "Completed", "On Hold", "Cancelled", "Only The Idea", "Never started", "Chance of Updates", "Might Update", "ignore this"]
     inconRedirect = {
         "Python": "Python",
         "Angular": "Angular",
@@ -33,7 +33,12 @@ export class HomeComponent implements OnInit, OnDestroy {
         "Javascript": "js ico",
         "PHP": "php cute",
         "Typescript": "ts ico",
-        "TS": "ts ico"
+        "TS": "ts ico",
+        "Only The Idea": "lamp",
+        "never started": "lamp",
+        "Chance of Updates": "might update",
+        "Might Update": "might update",
+        "ignore this": "ignore"
     }
     title = 'ProjectsViewer';
     loadedProjects: Project[] = [];
@@ -44,7 +49,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     selectedProjects: Project[] = [];
     maxNumberPerPage = 12;
     maxPages: number;
-    filterText = "!cancelled !scratch !NSMB Editor !minecraft";
+    filterText = "!ignore this";
     filterTextInput: string = "";
 
     constructor(private ActivatedRoute: ActivatedRoute, private projectService: ProjectService, private cookieService: CookieService, private router: Router) { }
