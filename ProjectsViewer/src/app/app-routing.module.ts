@@ -7,6 +7,7 @@ import { RawViewerComponent } from './components/raw-viewer/raw-viewer.component
 import { RedirectComponent } from './components/redirect/redirect.component';
 import { SCTTMComponent } from './components/specials/sct-tm/sct-tm.component';
 import { ArticleComponent } from './components/article/article.component';
+import { InfoComponent } from './components/info/info.component';
 
 const routes: Routes = [
     {
@@ -52,6 +53,10 @@ const routes: Routes = [
     {
         path: 'article',
         component: ArticleComponent,
+    },
+    {
+        path: 'article/info',
+        component: InfoComponent,
     },
     {
         path: 'article/:name',
