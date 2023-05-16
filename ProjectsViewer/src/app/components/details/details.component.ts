@@ -5,6 +5,7 @@ import { CookieService } from 'ngx-cookie-service';
 import { ProjectService } from 'src/app/services/project.service';
 import { Project } from 'src/app/models/project';
 import { projects } from "../../offlineProjects";
+import { AchievementService } from 'src/app/services/achievement-service.service';
 
 @Component({
     selector: 'app-details',
@@ -23,9 +24,10 @@ export class DetailsComponent implements OnInit, OnDestroy {
     public static selectedProjectSave: Project;
     selectedProject: Project;
 
-    constructor(private ActivatedRoute: ActivatedRoute, private router: Router, private cookieService: CookieService, private projectService: ProjectService) { }
+    constructor(private achievementService: AchievementService, private ActivatedRoute: ActivatedRoute, private router: Router, private cookieService: CookieService, private projectService: ProjectService) { }
 
     ngOnInit(): void {
+        this.achievementService.getAchievement('inspectorGadged');
         this.routeSub = this.ActivatedRoute.params.subscribe((params: Params) => {
             if (params['id'] == undefined) {
                 this.offline = true;
@@ -76,11 +78,25 @@ export class DetailsComponent implements OnInit, OnDestroy {
             }
         });
         this.selectedProject = DetailsComponent.selectedProjectSave;
+        if (this.selectedProject.status.toLocaleLowerCase().includes("ignore this".toLocaleLowerCase())) {
+            this.achievementService.getAchievement('ShyGuy');
+        }
         console.log(DetailsComponent.selectedProjectSave)
         console.log(this.selectedProject)
     }
 
     redirectToSpecial(page) {
         this.router.navigate(['special', page]);
+    }
+
+    addAchievement(achievement: string, redirectUrl = '') {
+        this.cookieService.set(achievement, "Found", { secure: true, sameSite: 'Strict' })
+        if (redirectUrl != '') {
+            window.location.href = redirectUrl;
+        }
+    }
+
+    sendToUrl(url: string) {
+        window.location.href = url;
     }
 }

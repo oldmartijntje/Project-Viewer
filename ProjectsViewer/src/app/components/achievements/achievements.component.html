@@ -1,3 +1,11 @@
+<div>
+    <h1>Unlocked {{amount - amountNotUnlocked}} out of {{amount}} achievements</h1>
+    <h1 *ngIf="hiddenAchievements > 1">{{hiddenAchievements}} out of {{totalHiddenAchievements}} Hidden achievements
+        left to go</h1>
+    <h1 *ngIf="hiddenAchievements == 1">{{hiddenAchievements}} out of {{totalHiddenAchievements}} Hidden achievement
+        left to go</h1>
+</div>
+
 <div class="games">
     <ng-container *ngFor="let achievement of achievements">
         <div class="game" *ngIf="unlocked.includes(achievement.name)">
@@ -14,7 +22,7 @@
             </div>
             <img class="icon" src="assets/images/icon/star.png" alt="You found this one">
         </div>
-        <div class="game" *ngIf="!unlocked.includes(achievement.name)">
+        <div class="game" *ngIf="!unlocked.includes(achievement.name) && !achievement.Hidden">
             <div class="game-title">
                 <p class="game-name">{{ achievement.BUName }}</p>
             </div>

@@ -16,6 +16,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { RedirectComponent } from './components/redirect/redirect.component';
 import { AchievementsComponent } from './components/achievements/achievements.component';
 import { SCTTMComponent } from './components/specials/sct-tm/sct-tm.component';
+import { ArticleComponent } from './components/article/article.component';
 
 @NgModule({
     declarations: [
@@ -30,7 +31,8 @@ import { SCTTMComponent } from './components/specials/sct-tm/sct-tm.component';
         FooterComponent,
         RedirectComponent,
         AchievementsComponent,
-        SCTTMComponent
+        SCTTMComponent,
+        ArticleComponent
     ],
     imports: [
         BrowserModule,

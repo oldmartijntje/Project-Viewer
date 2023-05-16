@@ -1,11 +1,13 @@
 <div class="bar-container">
     <form class="bar-form">
         <span class="logo" routerLink="/">YEET</span>
+        <button class="quick-button" (click)="redirect('home')">Home</button>
         <button *ngIf="!offlineMode" class="quick-button-left" (click)="changeMode()">Online Mode</button>
         <button *ngIf="offlineMode" class="quick-button-left" (click)="changeMode()">Offline Mode</button>
         <button (click)="deleteCookies()">Delete Cookies</button>
         <button class="quick-button-right" (click)="logCookies()">Log Cookies</button>
         <button *ngIf="showAchievements" class="quick-button" (click)="redirect('achievements')">Achievements</button>
-        <button class="quick-button" (click)="redirect('article/1')">Info</button>
+        <button class="quick-button-left" (click)="redirect('info')">Info</button>
+        <button class="quick-button-right" (click)="redirect('aboutMe')">About Me</button>
     </form>
 </div>

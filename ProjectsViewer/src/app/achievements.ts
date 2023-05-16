@@ -16,7 +16,7 @@ export const Achievements: Achievement[] = [
         "cookie": "ProjectsViewer.achievement.howdidwegethere",
         "BUName": "How did we get here?",
         "BUDescription": "???",
-        "Hidden": true
+        "Hidden": false
     },
     {
         "name": "Wait whot?",
@@ -38,8 +38,48 @@ export const Achievements: Achievement[] = [
         "name": "Rickroll :D",
         "description": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
         "cookie": "ProjectsViewer.achievement.Rickroll",
-        "BUName": "???",
-        "BUDescription": "???",
+        "BUName": "",
+        "BUDescription": "",
+        "Hidden": true
+    },
+    {
+        "name": "Article gon loesoe",
+        "description": "Angular be like: ng generate component article",
+        "cookie": "ProjectsViewer.achievement.articleWorks",
+        "BUName": "Article gon loesoe",
+        "BUDescription": "404",
+        "Hidden": false
+    },
+    {
+        "name": "Inspector Gadget",
+        "description": "Inspect a project",
+        "cookie": "ProjectsViewer.achievement.inspectorGadged",
+        "BUName": "",
+        "BUDescription": "",
+        "Hidden": true
+    },
+    {
+        "name": "Online Mode",
+        "description": "Look at the list of projects while offline",
+        "cookie": "ProjectsViewer.achievement.OnlineMode",
+        "BUName": "",
+        "BUDescription": "",
+        "Hidden": true
+    },
+    {
+        "name": "Going offline",
+        "description": "Look at the list of projects while offline",
+        "cookie": "ProjectsViewer.achievement.OfflineMode",
+        "BUName": "",
+        "BUDescription": "",
+        "Hidden": true
+    },
+    {
+        "name": "Shy Guy",
+        "description": "Look at a project OldMartijntje wants to forget about.",
+        "cookie": "ProjectsViewer.achievement.ShyGuy",
+        "BUName": "Shy Guy",
+        "BUDescription": "D... Did you just look at me?",
         "Hidden": false
     }
 ]

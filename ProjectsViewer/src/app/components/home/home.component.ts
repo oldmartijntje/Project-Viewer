@@ -5,6 +5,7 @@ import { ProjectService } from 'src/app/services/project.service';
 import { CookieService } from 'ngx-cookie-service';
 import { projects } from "../../offlineProjects";
 import { Router, ActivatedRoute, Params } from '@angular/router';
+import { AchievementService } from 'src/app/services/achievement-service.service';
 
 @Component({
     selector: 'app-home',
@@ -49,10 +50,10 @@ export class HomeComponent implements OnInit, OnDestroy {
     selectedProjects: Project[] = [];
     maxNumberPerPage = 12;
     maxPages: number;
-    filterText = "!ignore this";
+    filterText = "!ignore this !pokemon essentials";
     filterTextInput: string = "";
 
-    constructor(private ActivatedRoute: ActivatedRoute, private projectService: ProjectService, private cookieService: CookieService, private router: Router) { }
+    constructor(private achievementService: AchievementService, private ActivatedRoute: ActivatedRoute, private projectService: ProjectService, private cookieService: CookieService, private router: Router) { }
 
     ngOnDestroy(): void {
         if (this.projectServiceSubsription) {
@@ -86,8 +87,10 @@ export class HomeComponent implements OnInit, OnDestroy {
             this.loadedProjects = [...projects];
             this.loadedProjects = this.loadedProjects.reverse();
             this.loadedProjectsToStore = [...this.loadedProjects];
+            this.achievementService.getAchievement('OfflineMode');
             this.filterAndGetPage();
         } else {
+            this.achievementService.getAchievement('OnlineMode');
             this.projectServiceSubsription = this.projectService
                 .getProjects()
                 .subscribe((result: Project[]) => {

@@ -14,6 +14,11 @@ export class RedirectComponent implements OnInit, OnDestroy {
     pageNumber: number;
 
     constructor(private router: Router, private ActivatedRoute: ActivatedRoute, private cookieService: CookieService, private achievementService: AchievementService) { }
+    hardcodedRedirects = {
+        "info": ["article", "info"],
+        "home": [""],
+        "aboutMe": ["article", "about-me"],
+    }
 
     ngOnInit(): void {
         this.routeSub = this.ActivatedRoute.params.subscribe((params: Params) => {
@@ -23,6 +28,8 @@ export class RedirectComponent implements OnInit, OnDestroy {
                 } else {
                     this.router.navigate(['']);
                 }
+            } else if (params['page'] != undefined && params['page'] in this.hardcodedRedirects) {
+                this.router.navigate(this.hardcodedRedirects[params['page']]);
             } else if (params['page'] != undefined) {
                 this.router.navigate([params['page']]);
             } else {

@@ -87,6 +87,19 @@
                     src="assets/images/icon/star.png" (click)="redirectToSpecial(selectedProject.data.split('|')[0])"
                     class="icon" title="This project has it's own special page on this website." alt="Special"
                     style="cursor: pointer;">
+                <img *ngIf="selectedProject.data && selectedProject.data.split('|')[1] !='' && selectedProject.data.split('|')[2] =='' && selectedProject.data.split('|').length >= 2"
+                    src="assets/images/icon/star.png" (click)="addAchievement(selectedProject.data.split('|')[1])"
+                    class="icon" title="This project has it's own special thing." alt="Special"
+                    style="cursor: pointer;">
+                <img *ngIf="selectedProject.data && selectedProject.data.split('|')[1] !=''&& selectedProject.data.split('|')[2] !='' && selectedProject.data.split('|').length >= 3"
+                    src="assets/images/icon/star.png"
+                    (click)="addAchievement(selectedProject.data.split('|')[1], selectedProject.data.split('|')[2])"
+                    class="icon" title="This project has it's own special thing." alt="Special"
+                    style="cursor: pointer;">
+                <img *ngIf="selectedProject.data && selectedProject.data.split('|').length >= 3 && selectedProject.data.split('|')[2] !='' && selectedProject.data.split('|')[1] ==''"
+                    src="assets/images/icon/star.png" (click)="sendToUrl(selectedProject.data.split('|')[2])"
+                    class="icon" title="This project has it's own special thing." alt="Special"
+                    style="cursor: pointer;">
             </div>
         </div>
     </div>

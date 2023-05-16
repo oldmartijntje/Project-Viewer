@@ -3,25 +3,38 @@ import { CookieService } from 'ngx-cookie-service';
 import { Achievement, Achievements } from '../../achievements'
 
 @Component({
-  selector: 'app-achievements',
-  templateUrl: './achievements.component.html',
-  styleUrls: ['./achievements.component.scss']
+    selector: 'app-achievements',
+    templateUrl: './achievements.component.html',
+    styleUrls: ['./achievements.component.scss']
 })
 export class AchievementsComponent implements OnInit {
 
-  achievements: Achievement[];
-  unlocked = []
+    achievements: Achievement[];
+    unlocked = []
+    amountNotUnlocked = 0;
+    amount = 0;
+    hiddenAchievements = 0;
+    totalHiddenAchievements = 0;
 
-  constructor(private cookieService: CookieService) { }
+    constructor(private cookieService: CookieService) { }
 
-  ngOnInit(): void {
-    this.achievements = Achievements;
-    this.achievements.forEach(element => {
-      if (this.cookieService.check(element.cookie) && this.cookieService.get(element.cookie) === "Found") {
-        this.unlocked.push(element.name)
-      }
-    });
+    ngOnInit(): void {
+        this.achievements = Achievements;
+        this.achievements.forEach(element => {
+            this.amount++;
+            if (this.cookieService.check(element.cookie) && this.cookieService.get(element.cookie) === "Found") {
+                this.unlocked.push(element.name)
+            } else {
+                this.amountNotUnlocked++;
+                if (element.Hidden) {
+                    this.hiddenAchievements++;
+                }
+            }
+            if (element.Hidden) {
+                this.totalHiddenAchievements++;
+            }
+        });
 
-  }
+    }
 
 }

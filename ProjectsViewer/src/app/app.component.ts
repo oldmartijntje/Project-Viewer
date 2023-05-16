@@ -19,7 +19,7 @@ export class AppComponent implements OnInit, OnDestroy {
             this.cookieService.set('ProjectsViewer.showachievement', 'False', { secure: true, sameSite: 'Strict' })
         }
         if (!this.cookieService.check('ProjectsViewer.mode')) {
-            this.cookieService.set('ProjectsViewer.mode', 'Online', { secure: true, sameSite: 'Strict' })
+            this.cookieService.set('ProjectsViewer.mode', 'Offline', { secure: true, sameSite: 'Strict' })
         }
         if (!this.cookieService.check('ProjectsViewer.theme')) {
             this.cookieService.set('ProjectsViewer.theme', 'Default', { secure: true, sameSite: 'Strict' })
