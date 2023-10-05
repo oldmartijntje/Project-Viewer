@@ -766,7 +766,7 @@ export const projects: Project[] = [
         "readmeUrl": "",
         "userFriendlyness": "",
         "customizebility": "",
-        "scale": "C",
+        "scale": "D",
         "data": ""
     },
     {
@@ -774,7 +774,7 @@ export const projects: Project[] = [
         "name": "Virtual BBQDuck",
         "description": "A virtual assistant that you can program from within itself.",
         "link": "https://github.com/oldmartijntje/virtual-assistant",
-        "status": "Cancelled",
+        "status": "Cancelled, ignore this",
         "version": "",
         "type": "Python",
         "tumbnail": "assets/images/appTextures/VirtualBBQDuckAssistant.png",
@@ -783,6 +783,54 @@ export const projects: Project[] = [
         "userFriendlyness": "6/10 Henks",
         "customizebility": "Very much, you can program it from within itself.",
         "scale": "",
+        "data": ""
+    },
+    {
+        "id": 49,
+        "name": "PHP GPT autoresponse",
+        "description": "A program to automatically answer mailed questions. Made for a company called simpel subsidie.",
+        "link": "https://simpelsubsidie.nl",
+        "status": "Completed, In Progress",
+        "version": "",
+        "type": "PHP, HTML, CSS",
+        "tumbnail": "assets/images/appTextures/simpelsub.png",
+        "creators": "OldMartijntje",
+        "readmeUrl": "",
+        "userFriendlyness": "Best wel user freindly. Uitleg voor alles als je er over heen hovered.",
+        "customizebility": "Je kan de front en javascript aanpassen, de back staat in principe los.",
+        "scale": "B",
+        "data": ""
+    },
+    {
+        "id": 50,
+        "name": "Spotify Web app",
+        "description": "My own front end using the spotify API. It has the ability to view users, playlists, songs, albums and genres. It has it's own settings. You have a custom right click menu for copying songs or playlist data across the website. (for future purposes.). It has an asp.net backend but it doesn't do anything yet.",
+        "link": "https://github.com/oldmartijntje/Angular-spotify-hub",
+        "status": "Completed, In Progress",
+        "version": "",
+        "type": "Angular, HTML, CSS, C#, Typescript",
+        "tumbnail": "assets/images/appTextures/spotifyAngular.png",
+        "creators": "OldMartijntje",
+        "readmeUrl": "",
+        "userFriendlyness": "",
+        "customizebility": "",
+        "scale": "B",
+        "data": ""
+    },
+    {
+        "id": 51,
+        "name": "Pistonum",
+        "description": "Me and my classmates decided to make Steam, But for tools and software. A place to download your favorite IDE's, Programming languages, Image editores, etc.",
+        "link": "",
+        "status": "In Progress",
+        "version": "",
+        "type": "Angular, HTML, CSS, C#, Typescript",
+        "tumbnail": "",
+        "creators": "OldMartijntje, Mielesgames, Lennert, Jurrian, Tomsom999",
+        "readmeUrl": "",
+        "userFriendlyness": "",
+        "customizebility": "",
+        "scale": "C",
         "data": ""
     }
 ];
