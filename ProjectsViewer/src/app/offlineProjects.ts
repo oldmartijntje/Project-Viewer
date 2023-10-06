@@ -832,6 +832,22 @@ export const projects: Project[] = [
         "customizebility": "",
         "scale": "C",
         "data": ""
+    },
+    {
+        "id": 52,
+        "name": "Railroad Codepen",
+        "description": "I created an app to roll dice. These are special dice for a boardgame called 'Railroad Ink'. The reason I did this is because I want to be able to play every variant anywhere.",
+        "link": "https://codepen.io/oldmartijntje/pen/BavQKyJ",
+        "status": "Completed, Might Update",
+        "version": "",
+        "type": "HTML, CSS, Javascript, codepen",
+        "tumbnail": "assets/images/appTextures/codepen.png",
+        "creators": "OldMartijntje",
+        "readmeUrl": "",
+        "userFriendlyness": "",
+        "customizebility": "",
+        "scale": "",
+        "data": ""
     }
 ];
 

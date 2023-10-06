@@ -13,7 +13,7 @@ import { AchievementService } from 'src/app/services/achievement-service.service
     styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit, OnDestroy {
-    listOfTypes = ["Python", "Angular", "rpg maker xp", "Pokemon Essentials", "Scratch", "Minecraft", "C#", "NSMB Editor", "TS", "Typescript", "CSS", "HTML", "JS", "Javascript", "PHP"]
+    listOfTypes = ["Python", "Angular", "rpg maker xp", "Pokemon Essentials", "Scratch", "Minecraft", "C#", "NSMB Editor", "TS", "Typescript", "CSS", "HTML", "JS", "Javascript", "PHP", "codepen"]
     listOfStatuses = ["In Progress", "Completed", "On Hold", "Cancelled", "Only The Idea", "Never started", "Chance of Updates", "Might Update", "ignore this"]
     inconRedirect = {
         "Python": "Python",
@@ -39,7 +39,8 @@ export class HomeComponent implements OnInit, OnDestroy {
         "never started": "lamp",
         "Chance of Updates": "might update",
         "Might Update": "might update",
-        "ignore this": "ignore"
+        "ignore this": "ignore",
+        "codepen": "codepen"
     }
     title = 'ProjectsViewer';
     loadedProjects: Project[] = [];
