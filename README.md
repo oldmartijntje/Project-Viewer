@@ -11,7 +11,7 @@ https://oldmartijntje.github.io/Project-Viewer/page/1
 
 How to update the slide:
 
-- ` ng build --configuration "production" --base-href "https://https://oldmartijntje.github.io/Project-Viewer/"`
+- `ng build --configuration "production" --base-href "https://oldmartijntje.github.io/Project-Viewer/"`
 - `npx angular-cli-ghpages --dir=dist/projects-viewer`
 
 by error:
