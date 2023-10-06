@@ -206,7 +206,7 @@ export const projects: Project[] = [
         "readmeUrl": "https://github.com/oldmartijntje/UNO/blob/main/README.md",
         "userFriendlyness": "user friendly unless you try to implement your own things, then it's not user friendly.",
         "customizebility": "You add your own cards, you can say how many you want, you can define every card as in: are they special like a + card or a reverse etc.",
-        "scale": "B",
+        "scale": "D",
         "data": ""
     },
     {
@@ -243,7 +243,7 @@ export const projects: Project[] = [
     },
     {
         "id": 15,
-        "name": "(bad) Accounts System",
+        "name": "Accounts System",
         "description": "A Python account system that saves accounts to json, with the account system you can read data from other apps that use this account system, and your playtime gets stored",
         "link": "https://github.com/oldmartijntje/accounts-system",
         "status": "Completed | Upgradable",
@@ -254,7 +254,7 @@ export const projects: Project[] = [
         "readmeUrl": "https://github.com/oldmartijntje/accounts-system/blob/main/README.md",
         "userFriendlyness": "client friendly if implemented correctly. It's not that difficult to implement as described in the readme and examples folder.",
         "customizebility": "You can intergrate it in multiple ways, as explained in the readme as well as in the examples folder.",
-        "scale": "B",
+        "scale": "E",
         "data": ""
     },
     {
