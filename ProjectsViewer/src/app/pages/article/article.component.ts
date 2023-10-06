@@ -11,7 +11,7 @@ import { AchievementService } from 'src/app/services/achievement-service.service
 })
 export class ArticleComponent implements OnInit {
     routeSub: Subscription;
-    easterEgg: boolean = false;
+    page: string = '';
     constructor(private ActivatedRoute: ActivatedRoute, private router: Router, private cookieService: CookieService, private achievementService: AchievementService) { }
 
     ngOnInit(): void {
@@ -19,8 +19,11 @@ export class ArticleComponent implements OnInit {
             if (params['name'] == undefined) {
                 this.router.navigate(['article', 'works']);
             } else if (params['name'] == 'works') {
-                this.easterEgg = true;
+                this.page = "easterEgg";
                 this.achievementService.getAchievement('articleWorks');
+            } else if (params['name'] == 'about-me') {
+                this.page = "AboutMe";
+
             }
 
 

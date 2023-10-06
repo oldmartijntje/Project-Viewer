@@ -60,7 +60,7 @@ export const Achievements: Achievement[] = [
     },
     {
         "name": "Online Mode",
-        "description": "Look at the list of projects while offline",
+        "description": "Look at the list of projects while online",
         "cookie": "ProjectsViewer.achievement.OnlineMode",
         "BUName": "",
         "BUDescription": "",
