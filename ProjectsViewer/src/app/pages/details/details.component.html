@@ -5,8 +5,8 @@
     <h3>click the button at the top to change</h3>
 </div>
 
-<!--When the project can't be found for some reason-->
 <div *ngIf="!showOfflineError">
+    <!--When the project can't be found for some reason-->
     <div *ngIf="selectedProject == undefined">
         <h1>Hmm looks empty here</h1>
         <h2 *ngIf="!offline">There could be multiple reasons why:</h2>
