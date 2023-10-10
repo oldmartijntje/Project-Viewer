@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
-import { Achievement, Achievements } from '../../achievements'
+import { Achievement, Achievements } from '../../../assets/achievements'
 
 @Component({
     selector: 'app-achievements',

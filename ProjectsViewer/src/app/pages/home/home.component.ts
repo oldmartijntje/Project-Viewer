@@ -3,7 +3,7 @@ import { elementAt, Subscription } from 'rxjs';
 import { Project } from 'src/app/models/project';
 import { ProjectService } from 'src/app/services/project.service';
 import { CookieService } from 'ngx-cookie-service';
-import { projects } from "../../offlineProjects";
+import { projects } from "../../../assets/offlineProjects";
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { AchievementService } from 'src/app/services/achievement-service.service';
 

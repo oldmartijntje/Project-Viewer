@@ -18,6 +18,7 @@ export class RedirectComponent implements OnInit, OnDestroy {
         "info": ["article", "info"],
         "home": [""],
         "aboutMe": ["article", "about-me"],
+        "articleList": ["article", "articles"],
     }
 
     ngOnInit(): void {

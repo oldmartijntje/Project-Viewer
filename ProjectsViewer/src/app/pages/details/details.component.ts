@@ -4,7 +4,7 @@ import { Subscription } from 'rxjs';
 import { CookieService } from 'ngx-cookie-service';
 import { ProjectService } from 'src/app/services/project.service';
 import { Project } from 'src/app/models/project';
-import { projects } from "../../offlineProjects";
+import { projects } from "../../../assets/offlineProjects";
 import { AchievementService } from 'src/app/services/achievement-service.service';
 
 @Component({
