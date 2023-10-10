@@ -848,6 +848,22 @@ export const projects: Project[] = [
         "customizebility": "",
         "scale": "",
         "data": ""
+    },
+    {
+        "id": 53,
+        "name": "Adventure Land Website",
+        "description": "I made the website for my dad his boardgame and host it via github pages. ",
+        "link": "https://adventure-land.nl",
+        "status": "Completed, Might Update",
+        "version": "v1.1.0",
+        "type": "HTML, CSS, Javascript",
+        "tumbnail": "assets/images/appTextures/adventureLand.png",
+        "creators": "OldMartijntje",
+        "readmeUrl": "https://github.com/oldmartijntje/AdventureLandWebsite",
+        "userFriendlyness": "",
+        "customizebility": "",
+        "scale": "",
+        "data": ""
     }
 ];
 
