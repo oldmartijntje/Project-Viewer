@@ -95,4 +95,19 @@ button {
         margin: 10px 0;
         text-align: left;
     }
+
+
+    button {
+        padding: 5px;
+
+    }
+
+    .hide-on-phone {
+        display: none;
+    }
+
+    .quick-button-phone {
+        margin-right: 20px;
+        border-radius: 5px;
+    }
 }

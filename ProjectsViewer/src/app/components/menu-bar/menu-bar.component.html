@@ -6,9 +6,11 @@
         <button class="quick-button-left accentColor" (click)="redirect('1', 'page')">Projects</button>
         <button class="quick-button-right" (click)="redirect('aboutMe')">About Me</button>
         <button *ngIf="showAchievements" class="quick-button" (click)="redirect('achievements')">Achievements</button>
-        <button *ngIf="!offlineMode" class="quick-button-left" (click)="changeMode()">Online Mode</button>
-        <button *ngIf="offlineMode" class="quick-button-left" (click)="changeMode()">Offline Mode</button>
-        <button (click)="deleteCookies()">Delete Cookies</button>
-        <button class="quick-button-right" (click)="logCookies()">Log Cookies</button>
+        <button *ngIf="!offlineMode" class="quick-button-left quick-button-phone" (click)="changeMode()">Online
+            Mode</button>
+        <button *ngIf="offlineMode" class="quick-button-left quick-button-phone" (click)="changeMode()">Offline
+            Mode</button>
+        <button (click)="deleteCookies()" class="hide-on-phone">Delete Cookies</button>
+        <button class="quick-button-right hide-on-phone" (click)="logCookies()">Log Cookies</button>
     </form>
 </div>
