@@ -1,2 +1,27 @@
 <p *ngIf="page == 'easterEgg'">article works!</p>
-<p *ngIf="page == 'AboutMe'">AboutMe works!</p>
+<div *ngIf="page == 'AboutMe'">
+    <div class="about-me">
+        <h1>About Me</h1>
+        <p>
+            I am a software developer student passionate about creating innovative software solutions. I'm currently
+            pursuing my degree in software development.
+        </p>
+        <p>
+            My skills include:
+        </p>
+        <ul>
+            <li>HTML, CSS, JavaScript</li>
+            <li>Angular</li>
+            <li>Asp.net</li>
+            <li>Git</li>
+            <li>SQL</li>
+            <li>Python</li>
+            <li>C#</li>
+        </ul>
+        <p>
+            You can find my projects on <a href="https://github.com/oldmartijntje">GitHub</a>. Or on <a
+                routerLink="/page/1"> This Page</a> on this website.
+        </p>
+    </div>
+
+</div>

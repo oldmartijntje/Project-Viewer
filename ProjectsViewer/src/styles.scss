@@ -12,3 +12,10 @@ body * {
     padding: 0;
     box-sizing: border-box;
 }
+
+a:-webkit-any-link {
+    color: #1db954;
+    cursor: pointer;
+    text-decoration: none;
+    /* Or any other text-decoration value */
+}

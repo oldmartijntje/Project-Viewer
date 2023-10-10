@@ -41,8 +41,12 @@ export class MenuBarComponent implements OnInit {
         console.log(this.cookieService.getAll());
     }
 
-    redirect(page: string) {
-        this.router.navigate(['r', 'p', page]);
+    redirect(page: string, mode: string = "article") {
+        if (mode === "article") {
+            this.router.navigate(['r', 'p', page]);
+        } else {
+            this.router.navigate(['r', page]);
+        }
     }
 
 }

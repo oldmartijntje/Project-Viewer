@@ -10,10 +10,7 @@ import { ArticleComponent } from './pages/article/article.component';
 import { InfoComponent } from './pages/info/info.component';
 
 const routes: Routes = [
-    {
-        path: '',
-        component: HomeComponent,
-    },
+    { path: '', pathMatch: 'full', redirectTo: '/article/info' },
     {
         path: 'page/:pageNumber',
         component: HomeComponent,
