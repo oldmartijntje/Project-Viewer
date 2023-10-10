@@ -16,6 +16,12 @@ body * {
 a:-webkit-any-link {
     color: #1db954;
     cursor: pointer;
-    text-decoration: none;
+    // text-decoration: none;
     /* Or any other text-decoration value */
+}
+
+@media screen and (max-width: 768px) {
+    .hide-on-phone {
+        display: none;
+    }
 }

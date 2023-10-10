@@ -3,7 +3,7 @@
         <span class="logo" routerLink="/page/1">YEET</span>
         <button class="quick-button" (click)="redirect('home')">Home</button>
         <!-- <button class="quick-button-left" (click)="redirect('info')">Info</button> -->
-        <button class="quick-button-left accentColor" (click)="redirect('1', 'page')">Projects</button>
+        <button class="quick-button-left accentColor" (click)="redirect('projects')">Projects</button>
         <button class="quick-button-right" (click)="redirect('aboutMe')">About Me</button>
         <button *ngIf="showAchievements" class="quick-button" (click)="redirect('achievements')">Achievements</button>
         <button *ngIf="!offlineMode" class="quick-button-left quick-button-phone" (click)="changeMode()">Online
@@ -12,6 +12,6 @@
             Mode</button>
         <button (click)="deleteCookies()" class="hide-on-phone">Delete Cookies</button>
         <button class="quick-button-right hide-on-phone" (click)="logCookies()">Log Cookies</button>
-        <button class="quick-button hide-on-phone" (click)="redirect('articleList')">Articles</button>
+        <button class="quick-button hide-on-phone" (click)="redirect('pages')">Navigator</button>
     </form>
 </div>

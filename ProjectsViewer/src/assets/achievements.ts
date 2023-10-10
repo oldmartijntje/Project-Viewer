@@ -19,10 +19,10 @@ export const Achievements: Achievement[] = [
         "Hidden": false
     },
     {
-        "name": "Wait whot?",
+        "name": "404 not found++",
         "description": "Knowing to klick both 4's 4 times and to hover over the logo for 10 seconds\n\nYou are a true fan",
         "cookie": "ProjectsViewer.achievement.40farfetched",
-        "BUName": "???",
+        "BUName": "404 not found++",
         "BUDescription": "SafetyCT easteregg",
         "Hidden": false
     },
@@ -38,9 +38,9 @@ export const Achievements: Achievement[] = [
         "name": "Rickroll :D",
         "description": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
         "cookie": "ProjectsViewer.achievement.Rickroll",
-        "BUName": "",
-        "BUDescription": "",
-        "Hidden": true
+        "BUName": "What does this website have to offer?",
+        "BUDescription": "What was this website's purpose again?",
+        "Hidden": false
     },
     {
         "name": "Article gon loesoe",
@@ -80,6 +80,30 @@ export const Achievements: Achievement[] = [
         "cookie": "ProjectsViewer.achievement.ShyGuy",
         "BUName": "Shy Guy",
         "BUDescription": "D... Did you just look at me?",
+        "Hidden": false
+    },
+    {
+        "name": "Greetings Traveller...",
+        "description": "Went to take a look at the Navigator page.",
+        "cookie": "ProjectsViewer.achievement.Navigator",
+        "BUName": "Greetings Traveller...",
+        "BUDescription": "article/pages",
+        "Hidden": false
+    },
+    {
+        "name": "Warp zone",
+        "description": "You used the navigator to go to a page.",
+        "cookie": "ProjectsViewer.achievement.NavigatorWarp",
+        "BUName": "Warp zone",
+        "BUDescription": "Just be carefull not to mistake a black hole for a wormhole.",
+        "Hidden": false
+    },
+    {
+        "name": "Useless refresh",
+        "description": "You used the navigator to go to the navigator page.",
+        "cookie": "ProjectsViewer.achievement.UselessNavigatorWarp",
+        "BUName": "Well, that's useless...",
+        "BUDescription": "Refreshing your page, but with more steps.",
         "Hidden": false
     }
 ]

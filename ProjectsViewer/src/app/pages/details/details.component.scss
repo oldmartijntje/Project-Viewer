@@ -169,6 +169,10 @@ h3 {
             &-img {
                 filter: blur(1px);
             }
+
+            &-img:hover {
+                filter: blur(0px);
+            }
         }
 
         &-content {

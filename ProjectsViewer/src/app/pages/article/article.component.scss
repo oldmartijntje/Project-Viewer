@@ -26,6 +26,69 @@ li {
 div {
 
     font-family: Arial, sans-serif;
-    background-color: var(--home-button-background);
+    background-color: var(--background-accent);
     border-radius: 1rem;
+}
+
+.container {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    // justify-content: space-between;
+    // align-items: center;
+    flex-wrap: wrap;
+}
+
+.fullPage {
+    padding: 20px;
+}
+
+.card {
+    width: 300px;
+    height: auto;
+    margin: 20px;
+    border-radius: 1rem;
+    background-color: var(--item-home-background);
+    color: var(--item-home-textcolor);
+    box-shadow: 0 0 10px var(--item-home-glow);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    &:hover {
+        box-shadow: 0 0 20px var(--item-home-glow-hover);
+    }
+
+
+}
+
+
+button {
+    border: none;
+    outline: none;
+    background: var(--menu-bar-button-background);
+    padding: 10px;
+    color: var(--menu-bar-button-color);
+    font-weight: 700;
+    transition-duration: 0.3s;
+    cursor: pointer;
+    margin: 0.5rem;
+    border-radius: 5px;
+
+    &:hover {
+        color: var(--menu-bar-button-color-hover);
+        background: var(--menu-bar-button-background-hover);
+    }
+
+
+}
+
+h3 {
+    color: var(--color-accent);
+    margin-bottom: 0.5rem;
 }

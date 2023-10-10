@@ -1,5 +1,5 @@
 <p *ngIf="page == 'easterEgg'">article works!</p>
-<div *ngIf="page == 'AboutMe'">
+<div *ngIf="page == 'AboutMe'" class="fullPage">
     <div class="about-me">
         <h1>About Me</h1>
         <p>
@@ -23,5 +23,17 @@
                 routerLink="/page/1"> This Page</a> on this website.
         </p>
     </div>
-
+</div>
+<div *ngIf="page == 'pages'" class="fullPage">
+    <h1>Navigator</h1>
+    <div class="container">
+        <div *ngFor="let page of data" class="card">
+            <h3>{{page.name}}</h3>
+            <p>{{page.description}}</p>
+            <button (click)="redirect(page.key, 'warp')">Go To</button>
+            <p class="hide-on-phone" *ngIf="page.url">How to reach by URL: <a
+                    routerLink="/{{page.url}}">{{page.url}}</a>
+            </p>
+        </div>
+    </div>
 </div>

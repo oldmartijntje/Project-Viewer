@@ -11,6 +11,7 @@ export const Default: Theme = {
     description: 'Default theme',
     properties: {
         "--background": "#363636",
+        "--background-accent": "#3d3d3d",
         "--image-background-home": "#000000",
         "--color-accent": "#1db954",
         "--text-color-on-accent": "#fff",

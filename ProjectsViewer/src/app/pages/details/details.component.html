@@ -11,7 +11,7 @@
         <h1>Hmm looks empty here</h1>
         <h2 *ngIf="!offline">There could be multiple reasons why:</h2>
         <h3>-The page you are trying to load does not exist</h3>
-        <h3 *ngIf="!offline">-The database is offline</h3>
+        <h3 *ngIf="!offline">-The database is offline (quite likely the problem)</h3>
         <h3 *ngIf="!offline">-You are connected to the wrong database</h3>
         <h3 *ngIf="!offline">-The page is still loading (very very unlikely)</h3>
     </div>

@@ -3,6 +3,7 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
 import { Subscription } from 'rxjs';
 import { AchievementService } from 'src/app/services/achievement-service.service';
+import { PagesData, getDataByKey } from '../../../assets/viewerSettings'
 
 @Component({
     selector: 'app-redirect',
@@ -14,12 +15,7 @@ export class RedirectComponent implements OnInit, OnDestroy {
     pageNumber: number;
 
     constructor(private router: Router, private ActivatedRoute: ActivatedRoute, private cookieService: CookieService, private achievementService: AchievementService) { }
-    hardcodedRedirects = {
-        "info": ["article", "info"],
-        "home": [""],
-        "aboutMe": ["article", "about-me"],
-        "articleList": ["article", "articles"],
-    }
+
 
     ngOnInit(): void {
         this.routeSub = this.ActivatedRoute.params.subscribe((params: Params) => {
@@ -29,8 +25,8 @@ export class RedirectComponent implements OnInit, OnDestroy {
                 } else {
                     this.router.navigate(['']);
                 }
-            } else if (params['page'] != undefined && params['page'] in this.hardcodedRedirects) {
-                this.router.navigate(this.hardcodedRedirects[params['page']]);
+            } else if (params['page'] != undefined && getDataByKey(params['page']) != undefined) {
+                this.router.navigate(getDataByKey(params['page'])['routerRedirect']);
             } else if (params['page'] != undefined) {
                 this.router.navigate([params['page']]);
             } else {
