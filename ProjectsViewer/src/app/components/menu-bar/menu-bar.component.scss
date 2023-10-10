@@ -69,3 +69,30 @@ button {
     margin-right: 20px;
     border-radius: 5px;
 }
+
+/* Add this media query for mobile styling */
+@media screen and (max-width: 768px) {
+    .bar-container {
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .quick-button {
+        margin: 5px 0;
+        border-radius: 5px;
+    }
+
+    .quick-button-right {
+        margin-right: 0;
+    }
+
+    .quick-button-left {
+        margin-left: 0;
+    }
+
+    .logo {
+        margin: 10px 0;
+        text-align: left;
+    }
+}
