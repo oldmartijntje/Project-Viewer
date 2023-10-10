@@ -24,7 +24,8 @@
 }
 
 .accentColor:hover {
-    color: var(--color-accent);
+    color: var(--text-color-on-accent);
+    background-color: var(--color-accent);
 }
 
 .logo {
