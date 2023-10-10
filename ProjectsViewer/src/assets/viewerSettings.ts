@@ -10,6 +10,8 @@ export function getDataByKey(key, data: PageData[] = PagesData) {
     return data.find(item => item.key === key);
 }
 
+export const WebsiteVersion: string = "1.3.0";
+
 export const PagesData: PageData[] = [
     {
         "key": "info",
@@ -54,7 +56,7 @@ export const PagesData: PageData[] = [
         "url": "/page/1"
     },
     {
-        "key": "defaultProduct",
+        "key": "defaultProject",
         "routerRedirect": ["offlineProject", "14"],
         "description": "This is the project of the website you are currently looking at.",
         "name": "Project Viewer Project Page",

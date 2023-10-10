@@ -6,6 +6,7 @@ import { ProjectService } from 'src/app/services/project.service';
 import { Project } from 'src/app/models/project';
 import { projects } from "../../../assets/offlineProjects";
 import { AchievementService } from 'src/app/services/achievement-service.service';
+import { WebsiteVersion } from 'src/assets/viewerSettings';
 
 @Component({
     selector: 'app-details',
@@ -80,6 +81,9 @@ export class DetailsComponent implements OnInit, OnDestroy {
         this.selectedProject = DetailsComponent.selectedProjectSave;
         if (this.selectedProject.status.toLocaleLowerCase().includes("ignore this".toLocaleLowerCase())) {
             this.achievementService.getAchievement('ShyGuy');
+        }
+        if (this.selectedProject.id == 14) {
+            this.selectedProject.version = WebsiteVersion;
         }
         console.log(DetailsComponent.selectedProjectSave)
         console.log(this.selectedProject)

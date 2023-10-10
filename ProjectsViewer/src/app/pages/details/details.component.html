@@ -68,8 +68,8 @@
                     </div>
                 </div>
                 <h3 *ngIf="selectedProject.type">Made using: {{selectedProject.type}}</h3>
-                <h3 *ngIf="selectedProject.link">Project URL: <a
-                        href="{{selectedProject.link}}">{{selectedProject.link}}</a>
+                <h3 *ngIf="selectedProject.link">Project URL: <a href="{{selectedProject.link}}"
+                        target=”_blank”>{{selectedProject.link}}</a>
                 </h3>
                 <div class="desctiption-box">
                     <h3 *ngIf="selectedProject.description">{{selectedProject.description}}</h3>
@@ -77,7 +77,8 @@
                         a
                         description.</h3>
                 </div>
-                <h3 *ngIf="selectedProject.readmeUrl">Extra Url: <a href="{{ selectedProject.readmeUrl }}">{{
+                <h3 *ngIf="selectedProject.readmeUrl">Extra Url: <a href="{{ selectedProject.readmeUrl }}"
+                        target=”_blank”>{{
                         selectedProject.readmeUrl }}</a></h3>
                 <h3 *ngIf="selectedProject.userFriendlyness">The project is {{
                     selectedProject.userFriendlyness }}</h3>
