@@ -855,7 +855,7 @@ export const projects: Project[] = [
         "description": "I made the website for my dad his boardgame and host it via github pages. ",
         "link": "https://adventure-land.nl",
         "status": "Completed, Might Update",
-        "version": "v1.1.0",
+        "version": "v1.2.1",
         "type": "HTML, CSS, Javascript",
         "tumbnail": "assets/images/appTextures/adventureLand.png",
         "creators": "OldMartijntje",
