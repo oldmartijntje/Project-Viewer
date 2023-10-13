@@ -10,7 +10,7 @@ export function getDataByKey(key, data: PageData[] = PagesData) {
     return data.find(item => item.key === key);
 }
 
-export const WebsiteVersion: string = "1.3.1.0";
+export const WebsiteVersion: string = "1.3.2.0";
 
 export const PagesData: PageData[] = [
     {
