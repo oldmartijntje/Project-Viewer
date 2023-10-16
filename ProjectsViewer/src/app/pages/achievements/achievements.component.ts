@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
 import { Achievement, Achievements } from '../../../assets/achievements'
+import { Meta } from '@angular/platform-browser';
 
 @Component({
     selector: 'app-achievements',
@@ -16,7 +17,17 @@ export class AchievementsComponent implements OnInit {
     hiddenAchievements = 0;
     totalHiddenAchievements = 0;
 
-    constructor(private cookieService: CookieService) { }
+    constructor(private cookieService: CookieService, private meta: Meta) {
+
+        // Set OG metadata dynamically for the /achievements route
+        this.meta.updateTag({ property: 'og:title', content: 'Achievements Page Title' });
+        this.meta.updateTag({ property: 'og:description', content: 'Description for Achievements Page' });
+        this.meta.updateTag({ property: 'og:image', content: 'URL to Image for Achievements Page' });
+        this.meta.updateTag({ property: 'og:url', content: 'URL for Achievements Page' });
+        this.meta.updateTag({ property: 'og:type', content: 'website' });
+        this.meta.updateTag({ property: 'og:site_name', content: 'Your Site Name' });
+
+    }
 
     ngOnInit(): void {
         this.achievements = Achievements;
