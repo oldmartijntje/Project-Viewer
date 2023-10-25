@@ -1,6 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
-import { CookieService } from 'ngx-cookie-service';
 import { Subscription } from 'rxjs';
 import { AchievementService } from 'src/app/services/achievement-service.service';
 import { PagesData, getDataByKey } from '../../../assets/viewerSettings'
@@ -14,7 +13,7 @@ export class RedirectComponent implements OnInit, OnDestroy {
     routeSub: Subscription;
     pageNumber: number;
 
-    constructor(private router: Router, private ActivatedRoute: ActivatedRoute, private cookieService: CookieService, private achievementService: AchievementService) { }
+    constructor(private router: Router, private ActivatedRoute: ActivatedRoute, private achievementService: AchievementService) { }
 
 
     ngOnInit(): void {
@@ -40,15 +39,6 @@ export class RedirectComponent implements OnInit, OnDestroy {
     ngOnDestroy(): void {
         if (this.routeSub) {
             this.routeSub.unsubscribe();
-        }
-    }
-
-    cookiePlusNumber(cookie: string, number: number, startNumber: number) {
-        if (!this.cookieService.check(cookie)) {
-            this.cookieService.set(cookie, String(startNumber), { secure: true, sameSite: 'Strict' });
-        }
-        else {
-            this.cookieService.set(cookie, String(Number(this.cookieService.get(cookie)) + number), { secure: true, sameSite: 'Strict' });
         }
     }
 

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { CookieService } from 'ngx-cookie-service';
 import { AchievementService } from 'src/app/services/achievement-service.service';
 
 @Component({
@@ -16,7 +15,7 @@ export class SCTTMComponent implements OnInit {
     routeSub;
     incidentData;
     loadedIncident;
-    constructor(private cookieService: CookieService, private achievementService: AchievementService) { }
+    constructor(private achievementService: AchievementService) { }
 
     ngOnInit(): void {
     }

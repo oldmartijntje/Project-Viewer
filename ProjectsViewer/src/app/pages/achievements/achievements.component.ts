@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { CookieService } from 'ngx-cookie-service';
 import { Achievement, Achievements } from '../../../assets/achievements'
 import { Meta } from '@angular/platform-browser';
 
@@ -17,7 +16,7 @@ export class AchievementsComponent implements OnInit {
     hiddenAchievements = 0;
     totalHiddenAchievements = 0;
 
-    constructor(private cookieService: CookieService, private meta: Meta) {
+    constructor(private meta: Meta) {
 
         // Set OG metadata dynamically for the /achievements route
         this.meta.updateTag({ property: 'og:title', content: 'Achievements Page Title' });
@@ -33,7 +32,7 @@ export class AchievementsComponent implements OnInit {
         this.achievements = Achievements;
         this.achievements.forEach(element => {
             this.amount++;
-            if (this.cookieService.check(element.cookie) && this.cookieService.get(element.cookie) === "Found") {
+            if (localStorage.getItem(element.cookie) != null && localStorage.getItem(element.cookie) === "Found") {
                 this.unlocked.push(element.name)
             } else {
                 this.amountNotUnlocked++;

@@ -2,7 +2,6 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Project } from 'src/app/models/project';
 import { ProjectService } from 'src/app/services/project.service';
-import { CookieService } from 'ngx-cookie-service';
 import { projects } from "../../../assets/offlineProjects";
 
 @Component({
@@ -16,10 +15,10 @@ export class RawViewerComponent implements OnInit, OnDestroy {
     projects: Project[] = [];
     projectToEdit?: Project;
 
-    constructor(private projectService: ProjectService, private cookieService: CookieService) { }
+    constructor(private projectService: ProjectService) { }
 
     ngOnInit(): void {
-        if (this.cookieService.get('ProjectsViewer.mode') === 'Offline') {
+        if (localStorage.getItem('ProjectsViewer.mode') === 'Offline') {
             this.projects = projects;
         } else {
             this.projectServiceSubsription = this.projectService
@@ -35,7 +34,7 @@ export class RawViewerComponent implements OnInit, OnDestroy {
     }
 
     initNewProject() {
-        if (this.cookieService.get('ProjectsViewer.mode') === 'Offline') {
+        if (localStorage.getItem('ProjectsViewer.mode') === 'Offline') {
             alert("You are in offline mode, so you can't create a new project");
         } else {
             this.projectToEdit = new Project();
@@ -43,7 +42,7 @@ export class RawViewerComponent implements OnInit, OnDestroy {
     }
 
     editProject(project: Project) {
-        if (this.cookieService.get('ProjectsViewer.mode') === 'Offline') {
+        if (localStorage.getItem('ProjectsViewer.mode') === 'Offline') {
             alert("You are in offline mode, so you can't edit the project");
         } else {
             this.projectToEdit = project;

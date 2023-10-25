@@ -2,7 +2,6 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { ThemeService } from './theme/theme.service';
-import { CookieService } from 'ngx-cookie-service';
 
 @Component({
     selector: 'app-root',
@@ -12,19 +11,20 @@ import { CookieService } from 'ngx-cookie-service';
 export class AppComponent implements OnInit, OnDestroy {
     themeSub: Subscription | undefined;
     themes: any;
-    constructor(private httpClient: HttpClient, private themeService: ThemeService, private cookieService: CookieService) { }
+    constructor(private httpClient: HttpClient, private themeService: ThemeService) { }
 
     ngOnInit() {
-        if (!this.cookieService.check('ProjectsViewer.showachievement')) {
-            this.cookieService.set('ProjectsViewer.showachievement', 'False', { secure: true, sameSite: 'Strict' })
+        if (localStorage.getItem('ProjectsViewer.showachievement') === null) {
+            localStorage.setItem('ProjectsViewer.showachievement', 'False');
         }
-        if (!this.cookieService.check('ProjectsViewer.mode')) {
-            this.cookieService.set('ProjectsViewer.mode', 'Offline', { secure: true, sameSite: 'Strict' })
+        if (localStorage.getItem('ProjectsViewer.mode') === null) {
+            localStorage.setItem('ProjectsViewer.mode', 'Offline');
         }
-        if (!this.cookieService.check('ProjectsViewer.theme')) {
-            this.cookieService.set('ProjectsViewer.theme', 'Default', { secure: true, sameSite: 'Strict' })
+        if (localStorage.getItem('ProjectsViewer.theme') === null) {
+            localStorage.setItem('ProjectsViewer.theme', 'Default');
         }
-        var theme = this.cookieService.get('ProjectsViewer.theme');
+
+        var theme = localStorage.getItem('ProjectsViewer.theme');
         this.themeService.tryTheme(theme);
 
     }

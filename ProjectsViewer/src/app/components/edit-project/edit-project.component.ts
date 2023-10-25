@@ -1,7 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Project } from 'src/app/models/project';
 import { ProjectService } from 'src/app/services/project.service';
-import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-edit-project',
@@ -12,13 +11,13 @@ export class EditProjectComponent implements OnInit {
   @Input() project?: Project;
   @Output() projectUpdated = new EventEmitter<Project[]>();
 
-  constructor(private projectService: ProjectService, private cookieService: CookieService) { }
+  constructor(private projectService: ProjectService) { }
 
   ngOnInit(): void {
   }
 
   updateProject(project: Project) {
-    if (this.cookieService.get('ProjectsViewer.mode') === 'Offline') {
+    if (localStorage.getItem('ProjectsViewer.mode') === 'Offline') {
       alert("You are in offline mode, so you can't update the project");
       this.cancelEditor();
     } else {
@@ -27,7 +26,7 @@ export class EditProjectComponent implements OnInit {
   }
 
   deleteProject(project: Project) {
-    if (this.cookieService.get('ProjectsViewer.mode') === 'Offline') {
+    if (localStorage.getItem('ProjectsViewer.mode') === 'Offline') {
       alert("You are in offline mode, so you can't delete the project");
       this.cancelEditor();
     } else {
@@ -36,7 +35,7 @@ export class EditProjectComponent implements OnInit {
   }
 
   createProject(project: Project) {
-    if (this.cookieService.get('ProjectsViewer.mode') === 'Offline') {
+    if (localStorage.getItem('ProjectsViewer.mode') === 'Offline') {
       alert("You are in offline mode, so you can't create a new project");
       this.cancelEditor();
     } else {

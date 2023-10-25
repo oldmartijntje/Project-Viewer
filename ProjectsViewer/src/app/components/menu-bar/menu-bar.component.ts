@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ProjectService } from 'src/app/services/project.service';
-import { CookieService } from 'ngx-cookie-service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -12,33 +11,37 @@ export class MenuBarComponent implements OnInit {
     offlineMode: boolean;
     showAchievements: boolean;
 
-    constructor(private projectService: ProjectService, private cookieService: CookieService, private router: Router) { }
+    constructor(private projectService: ProjectService, private router: Router) { }
 
     ngOnInit(): void {
-        if (this.cookieService.get('ProjectsViewer.showachievement') === "True") {
+        if (localStorage.getItem("ProjectsViewer.showachievement") === "True") {
             this.showAchievements = true;
         } else {
             this.showAchievements = false;
         }
-        this.offlineMode = this.cookieService.get('ProjectsViewer.mode') === 'Offline';
+        this.offlineMode = localStorage.getItem('ProjectsViewer.mode') === 'Offline';
     }
 
     changeMode() {
-        if (this.cookieService.get('ProjectsViewer.mode') === 'Offline') {
-            this.cookieService.set('ProjectsViewer.mode', 'Online', { secure: true, sameSite: 'Strict' });
+        if (localStorage.getItem('ProjectsViewer.mode') === 'Offline') {
+            localStorage.setItem('ProjectsViewer.mode', 'Online');
         } else {
-            this.cookieService.set('ProjectsViewer.mode', 'Offline', { secure: true, sameSite: 'Strict' });
+            localStorage.setItem('ProjectsViewer.mode', 'Offline');
         }
         window.location.reload();
     }
 
     deleteCookies() {
-        this.cookieService.deleteAll();
+        localStorage.clear();
         window.location.reload();
     }
 
     logCookies() {
-        console.log(this.cookieService.getAll());
+        var items = {};
+        for (let index = 0; index < localStorage.length; index++) {
+            items[localStorage.key(index)] = localStorage.getItem(localStorage.key(index));
+        }
+        console.log(items);
     }
 
     redirect(page: string, mode: string = "article") {

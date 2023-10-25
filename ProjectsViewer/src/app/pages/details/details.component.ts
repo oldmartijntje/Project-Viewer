@@ -1,7 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { CookieService } from 'ngx-cookie-service';
 import { ProjectService } from 'src/app/services/project.service';
 import { Project } from 'src/app/models/project';
 import { projects } from "../../../assets/offlineProjects";
@@ -25,7 +24,7 @@ export class DetailsComponent implements OnInit, OnDestroy {
     public static selectedProjectSave: Project;
     selectedProject: Project;
 
-    constructor(private achievementService: AchievementService, private ActivatedRoute: ActivatedRoute, private router: Router, private cookieService: CookieService, private projectService: ProjectService) { }
+    constructor(private achievementService: AchievementService, private ActivatedRoute: ActivatedRoute, private router: Router, private projectService: ProjectService) { }
 
     ngOnInit(): void {
         this.achievementService.getAchievement('inspectorGadged');
@@ -41,7 +40,7 @@ export class DetailsComponent implements OnInit, OnDestroy {
                 this.offline = false;
                 this.projectId = params['id'];
                 DetailsComponent.projectIdNumber = +this.projectId;
-                if (this.cookieService.get('ProjectsViewer.mode') === 'Offline') {
+                if (localStorage.getItem('ProjectsViewer.mode') === 'Offline') {
                     this.showOfflineError = true;
                 } else {
                     this.showOfflineError = false;
@@ -94,7 +93,7 @@ export class DetailsComponent implements OnInit, OnDestroy {
     }
 
     addAchievement(achievement: string, redirectUrl = '') {
-        this.cookieService.set(achievement, "Found", { secure: true, sameSite: 'Strict' })
+        localStorage.setItem(achievement, 'Found')
         if (redirectUrl != '') {
             window.location.href = redirectUrl;
         }

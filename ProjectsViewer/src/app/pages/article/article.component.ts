@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
-import { CookieService } from 'ngx-cookie-service';
 import { Subscription } from 'rxjs';
 import { AchievementService } from 'src/app/services/achievement-service.service';
 import { PageData, PagesData, getDataByKey } from 'src/assets/viewerSettings';
@@ -17,7 +16,6 @@ export class ArticleComponent implements OnInit {
 
     constructor(private ActivatedRoute: ActivatedRoute,
         private router: Router,
-        private cookieService: CookieService,
         private achievementService: AchievementService) { }
 
     ngOnInit(): void {

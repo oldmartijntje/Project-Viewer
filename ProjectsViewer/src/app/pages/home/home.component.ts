@@ -2,7 +2,6 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { elementAt, Subscription } from 'rxjs';
 import { Project } from 'src/app/models/project';
 import { ProjectService } from 'src/app/services/project.service';
-import { CookieService } from 'ngx-cookie-service';
 import { projects } from "../../../assets/offlineProjects";
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { AchievementService } from 'src/app/services/achievement-service.service';
@@ -54,7 +53,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     filterText = "!ignore this !pokemon essentials";
     filterTextInput: string = "";
 
-    constructor(private achievementService: AchievementService, private ActivatedRoute: ActivatedRoute, private projectService: ProjectService, private cookieService: CookieService, private router: Router) { }
+    constructor(private achievementService: AchievementService, private ActivatedRoute: ActivatedRoute, private projectService: ProjectService, private router: Router) { }
 
     ngOnDestroy(): void {
         if (this.projectServiceSubsription) {
@@ -66,11 +65,11 @@ export class HomeComponent implements OnInit, OnDestroy {
     }
 
     ngOnInit(): void {
-        if (this.cookieService.check("filterTexInput")) {
-            this.filterText = this.cookieService.get("filterTexInput");
+        if (localStorage.getItem("filterTexInput") != null) {
+            this.filterText = localStorage.getItem("filterTexInput");
             this.filterTextInput = this.filterText;
         } else {
-            this.cookieService.set("filterTexInput", this.filterText);
+            localStorage.setItem("filterTexInput", this.filterText);
         }
         this.routeSub = this.ActivatedRoute.params.subscribe((params: Params) => {
             if (params['pageNumber'] != undefined) {
@@ -84,7 +83,7 @@ export class HomeComponent implements OnInit, OnDestroy {
                 this.pageNumber = 1;
             }
         });
-        if (this.cookieService.get('ProjectsViewer.mode') === 'Offline') {
+        if (localStorage.getItem('ProjectsViewer.mode') === 'Offline') {
             this.loadedProjects = [...projects];
             this.loadedProjects = this.loadedProjects.reverse();
             this.loadedProjectsToStore = [...this.loadedProjects];
@@ -133,7 +132,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     }
 
     openProjectDetails(id: number): void {
-        if (this.cookieService.get('ProjectsViewer.mode') === 'Offline') {
+        if (localStorage.getItem('ProjectsViewer.mode') === 'Offline') {
             this.router.navigate(['offlineProject', id.toString()]);
         } else {
             this.router.navigate(['project', id.toString()]);
@@ -159,7 +158,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     }
 
     saveInput() {
-        this.cookieService.set("filterTexInput", this.filterText);
+        localStorage.setItem("filterTexInput", this.filterText);
     }
 
 
